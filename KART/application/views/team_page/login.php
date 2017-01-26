@@ -12,7 +12,7 @@
 	            <label for="signup">
 					No account? SIGN UP now!
 				</label>
-					<a href="signup"><button class="btn btn-lg btn-common">SIGN UP</button></a>
+					<a href="<?= base_url()?>usr/signup"><button class="btn btn-lg btn-common">SIGN UP</button></a>
             </div>
 		<div class="container">
 		<?php
@@ -32,7 +32,7 @@
             break;
         }
         ?>
-			<form action="dologin" method="post" class="minimal">
+			<form action="<?= base_url()?>usr/dologin" method="post" class="minimal">
 				<label for="username">
 					Username:
 					<input type="text" name="username" id="username" maxlength="20" placeholder="Username (9 - 20 karakter)" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" title="Info: MIN 9 Characters, NUMBERS can't be up-front, and not allowed for NUMBERS only" />
