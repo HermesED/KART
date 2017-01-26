@@ -1,54 +1,45 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-/*
-| -------------------------------------------------------------------------
-| URI ROUTING
-| -------------------------------------------------------------------------
-| This file lets you re-map URI requests to specific controller functions.
-|
-| Typically there is a one-to-one relationship between a URL string
-| and its corresponding controller class/method. The segments in a
-| URL normally follow this pattern:
-|
-|	example.com/class/method/id/
-|
-| In some instances, however, you may want to remap this relationship
-| so that a different class/function is called than the one
-| corresponding to the URL.
-|
-| Please see the user guide for complete details:
-|
-|	https://codeigniter.com/user_guide/general/routing.html
-|
-| -------------------------------------------------------------------------
-| RESERVED ROUTES
-| -------------------------------------------------------------------------
-|
-| There are three reserved routes:
-|
-|	$route['default_controller'] = 'welcome';
-|
-| This route indicates which controller class should be loaded if the
-| URI contains no data. In the above example, the "welcome" class
-| would be loaded.
-|
-|	$route['404_override'] = 'errors/page_missing';
-|
-| This route will tell the Router which controller/method to use if those
-| provided in the URL cannot be matched to a valid route.
-|
-|	$route['translate_uri_dashes'] = FALSE;
-|
-| This is not exactly a route, but allows you to automatically route
-| controller and method names that contain dashes. '-' isn't a valid
-| class or method name character, so it requires translation.
-| When you set this option to TRUE, it will replace ALL dashes in the
-| controller and method URI segments.
-|
-| Examples:	my-controller/index	-> my_controller/index
-|		my-controller/my-method	-> my_controller/my_method
-*/
-$route['default_controller'] = 'welcome';
-$route['404_override'] = '';
+$route['default_controller'] 	= 'main/home';
+
+$route['home'] 					  = 'main/home';
+$route['maintenance'] 		= 'main/soon';
+$route['about'] 				  = 'main/aboutus';
+$route['contact'] 				= 'main/contactus';
+$route['service'] 				= 'main/service';
+$route['pricing'] 				= 'main/price';
+$route['error'] 				  = 'main/error404';
+
+$route['login']					  = 'login/log'; //menampilkan halaman login
+$route['login/(:any)']		= 'login/log/$1';  // formulir login user
+$route['logout']				  = 'login/logout';
+$route['dologin'] 				= 'login/login'; //proses do login
+
+
+$route['signup'] 				  = 'login/signup';
+$route['signing'] 				= 'login/dosignup';
+
+$route['pendaftaran'] 		= 'administrasi/reg';
+$route['daftar'] 				  = 'administrasi/dftr'; //eksekusi form
+$route['pembatalan'] 			= 'administrasi/btl';
+$route['batal'] 				  = 'administrasi/batal'; //eksekusi form
+
+$route['kegiatan']				= 'kegiatan/keg1';
+$route['kegiatan2']				= 'kegiatan/kegiatan2';
+$route['kegiatandetail']	= 'kegiatan/detailkeg';
+$route['timeline_keg']		= 'kegiatan/tlkeg';
+$route['entrykeg']				= 'kegiatan/entrykeg';
+$route['submitkeg']				= 'kegiatan/submit';
+
+$route['gallery'] 				= 'gallery/g1';
+$route['gallery2'] 				= 'gallery/g2';
+$route['gallerydetail'] 	= 'gallery/g_detail';
+
+$route['members']				  = 'member/m1';
+$route['users']					  = 'member/userpage';
+$route['member_admin']		= 'member/entrym';
+$route['entrymb']				  = 'member/input_anggota';
+
+$route['404_override'] = 'main/error404';
 $route['translate_uri_dashes'] = FALSE;
