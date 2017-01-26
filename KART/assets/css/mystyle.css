@@ -1,0 +1,995 @@
+@import url("assets/Aerial/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Alegreya:400,700");
+body {
+  padding-top: 70px;
+  background-color: #999;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+/* CUSTOMIZE NAVIGASI BAR
+-------------------------------------------------- */
+/* Customize dasar */
+.navbar{
+  font-weight: bold;
+  font-size: 16.7px;
+  border-color: #333;
+  width: auto;
+  cursor: default;
+  font-family: "Roboto", Helvetica, sans-serif;
+  background-color: #333;
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+
+  padding: 0;
+}
+
+.navbar li > a{
+  border-bottom: dotted 1px;
+}
+
+.navbar:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0.45em;
+      background-color: #333;
+    }
+      .navbar > ul > li {
+        position: relative;
+        display: inline-block;
+        margin-left: 1em;
+      }
+
+        .navbar > ul > li a {
+          color: #333;
+          text-decoration: none;
+          border: 0;
+          display: block;
+          padding: 1.5em 0.5em 1.35em 0.5em;
+        }
+
+.navbar .fa{
+  margin-right: 4px;
+}
+/* Customize list navigasi */
+.navbar li{
+  margin-right: 8px;
+  width: auto;
+  margin-top: 8px;
+}
+/* Customize warna link navigasi saat mouse hover */
+.navbar li:hover{
+  background-color: #333;
+}
+/* Customize warna huruf link navigasi*/
+.navbar .navbar-nav li > a{
+  color: #FFFFFF;
+}
+/* Customize warna huruf link navigasi saat di hover*/
+.navbar .navbar-nav li > a:hover{
+  color: #FFFFFF;
+}
+/* Customize link navigasi saat aktif */
+.navbar .navbar-nav .active a{
+  background-color: #333;
+  color: #FFFFFF;
+}
+/* Customize link navigasi saat aktif dan di hover */
+.navbar .navbar-nav .active a:hover{
+  background-color: #333;
+  color: #FFFFFF;
+}
+/* Customize link navigasi PEMBATALAN saat aktif */
+.navbar .navbar-nav .active2 a{
+  background-color: #333;
+  color: #FFFFFF;
+}
+/* Customize link navigasi PEMBATALAN saat aktif dan di hover */
+.navbar .navbar-nav .active2 a:hover{
+  background-color: #111;
+  color: #FFFFFF;
+}
+/* Customize link navigasi ADMIN saat aktif */
+.navbar .navbar-nav .aktif a{
+  background-color: #999;
+  color: #000000;
+}
+/* Customize link navigasi ADMIN saat aktif dan di hover */
+.navbar .navbar-nav .aktif a:hover{
+  background-color: #555;
+  color: #000000;
+}
+/* Customize gambar stmik kharisma di navigasi bar */
+.navbar .container img{
+  width: 250px;
+  height: 35px;
+  margin-top: 5px;
+  margin-right: 20px;
+  margin-left: 8px;
+  position: static;
+}
+/* Customize tulisan K-ART di navigasi bar */
+.navbar .container h3{
+  margin-right: 20px;
+  margin-top: 3px;
+  margin-left: 5px;
+  position: static;
+  font-family: lucida handwriting;
+  font-size: 19px;
+  font-weight: bold;
+  color: #999;
+  font-style: oblique;
+}
+/* CUSTOMIZE MENU DROPDOWN
+-------------------------------------------------- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #333;
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+    background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+    padding: 0;
+}
+
+.dropdown:hover li {
+    background-color: transparent;
+}
+
+.navbar .dropdown span{
+  color: #FFFFFF;
+}
+
+/* Customize menu dropdown*/
+.dropdown .dropdown-menu{
+  background-color: #AA0000;
+  width: auto;
+}
+/* Dropdown Glyphicon*/
+.dropdown .dropdown-menu .fa{
+  margin-right: 20px;
+}
+/* Customize menu dropdown*/
+.dropdown-menu{
+  font-size: 25px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  width: auto;
+  display: none;
+  background-color: #333;
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  padding: 0;
+}
+/* Warna link dropdown*/
+.dropdown .dropdown-menu a{
+  color: #FFFFFF;
+  width: auto;
+}
+/* Warna link dropdown saat mouse hover*/
+.dropdown .dropdown-menu a:hover{
+  background-color: #333;
+  color: #FFFFFF;
+}
+/* Warna link dropdown saat aktif */
+.dropdown .dropdown-menu .active a{
+  background-color: #333;
+}
+/* Warna link dropdown yang sedang "aktif" akan berubah warna
+saat mouse hover, agar tidak menganggu konsistensi*/
+.dropdown .dropdown-menu .active a:hover{
+  background-color: #333;
+  color: #fff;
+}
+/* Customize kata "ABOUT US" pada menu dropdown */
+.dropdown .dropdown-menu h5{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  color: #fff;
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/*Kulit Carousel*/
+.carousel {
+  height: 380px;
+  margin-top: 100px;
+  margin-bottom: 101px;
+  width: auto;
+  border: 3px solid white;
+  opacity: 0.9;
+  border-radius: 10px;
+
+}
+.carousel:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0.45em;
+      background-color: #fff;
+    }
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 121;
+}
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 380px;
+}
+.carousel-inner > .item > img {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 380px;
+  width: 40%;
+}
+/* Customize Warna Tombol yang ada dalam Carousel */
+.carousel .carousel-caption .btn-primary{
+  background-color: #222;
+  border-color: #333;
+}
+/* Tombol didalam Carousel berganti warna saat di mouse hover */
+.carousel .carousel-caption .btn-primary:hover{
+  background-color: #111;
+  border-color: #000000;
+}
+/* Carousel Heading*/
+.carousel h1{
+  color: #000000;
+  font-weight: bold;
+  font-size: 35px;
+}
+/* Carousel h1 class utama*/
+.carousel .utama{
+  color: #333;
+  margin-bottom: 80px;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+/* Carousel paragraf */
+.carousel p{
+  color: #111;
+  font-weight: bold;
+  font-size: 25px;
+}
+/* CUSTOMIZE TEMPLATE DASHBOARD (PENGURUS)
+-------------------------------------------------- */
+/* Customize Dashboard */
+#pengurus{
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+.pengurus .text-muted{
+  color: #fff;
+}
+.page-header{
+  font-size: 30px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 50px;
+  text-align: center;
+  color: #fff;
+}
+    .teks_pengurus h4{
+      text-align: center;
+      font-family: "Roboto", Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 23px;
+      color: #fff;
+    }
+
+#pengurus .placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+}
+    .placeholders p{
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .placeholder img {
+      display: inline-block;
+      border-radius: 50%;
+    }
+#pengurus .gmbrkontak{
+  width: 150%
+}
+ 
+/*HALAMAN ADMIN*/
+.pengurus button{
+  text-align: center;
+  width: 100%;
+}
+form{
+  width: auto;
+  text-align: left;
+  margin: auto;
+}
+.pengurus .checkbox{
+  margin-left: 30px;
+}
+.pengurus form,label{
+  font-size: 18px;
+  color: #fff;
+}
+.pengurus #ADMIN .control-group label{
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+/*====== CSS KHUSUS BEBERAPA BAGIAN PADA DESIGN LOW LEVEL ADMIN ======*/
+.pengurus #ADMIN2 .control-group label{
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+.pengurus #ADMIN2 .control-group input{
+  text-align: center;
+}
+.pengurus #ADMIN2 .control-group button{
+  text-align: center;
+  width: 70%;
+  margin-left: 35px;
+}
+#logout a{
+  color: #fff;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+#logout a:hover{
+  color: #f00;
+}
+/*====================================================================*/
+.pengurus .control-group h2{
+  text-align: center;
+  font-weight: bold;
+}
+.table-responsive{
+  width: auto;
+}
+/*TULISAN JUDUL "PENGURUS DAN ANGGOTA UKM"*/
+.pengurus .page-header{
+  color: #fff;
+  font-weight: bold;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+/*TULISAN TOTAL ANGGOTA UKM PADA PENGURUS*/
+.pengurus .sub-header{
+  color: #fff;
+  font-weight: bold;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+/*TABLE HEADER*/
+.table-responsive th{
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+/*ISI TABLE*/
+.table-responsive .table td{
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+}
+/*DESIGN TABLE*/
+.table-responsive .table-bordered{
+  background-color: #000000;
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+}
+.table-responsive .table-bordered input{
+  border-color: #000000;
+  color: #000000;
+}
+.table-responsive .table-bordered td > a{
+  color: #F00;
+}
+/*======= TO HIDE TABLE UPDATE DATA MEMBER =======*/
+#myDIV{
+  display: none;
+}
+.btn-primary{
+  font-weight: bold;
+  font-size: 20px;
+}
+/*================================================*/
+/* CUSTOMIZE FORM PENDAFTARAN & PEMBATALAN
+-------------------------------------------------- */
+/*Bagian list checkbox jurusan pada form pendaftaran*/
+#contact .container h2{
+  color: #F90000;
+  margin-top: 35px;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  color: #999;
+}
+#contact .container .control-group{
+  font-weight: bold;
+  font-size: 18px;
+  color: #F90000;
+  color: #fff;
+}
+/*Bagian checkbox*/
+#contact .container .control-group .checkbox{
+  margin-left: 40px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+#contact .container form >h3{
+  color: #fff;
+}
+#contact .container .control-group p{
+  color: #f00;
+  text-align: right;
+}
+#contact form{
+  width: 100%;
+}
+/* CUSTOMIZE MARKETING DAN FEATURETTES
+-------------------------------------------------- */
+.marketing{
+  text-align: center;
+  color: #999;
+  font-weight: bold, italic;
+  font-size: 25px;
+  font-family: "Alegreya", "Roboto", sans-serif;
+  border: 2px solid white;
+  background-color: #222;
+  border-radius: 10px;
+  opacity: 0.8;
+  margin-left: -18px;
+}
+/* Customize Tombol*/
+.marketing .btn-primary{
+  background-color: #000;
+  color: #fff;
+  margin-top: 10px;
+  border-color: #555;
+  font-size: 20px;
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+  background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+}
+/* Customize Tombol saat di Hover*/
+.marketing .btn-primary:hover{
+  opacity: 0.5;
+  color: #fff;
+}
+
+.marketing .icon{
+  color: #999;
+}
+.marketing .icon:hover{
+  color: #999;
+}
+.marketing .row h2{
+  margin-top: -13px;
+}
+/* CUSTOMIZE FOOTER
+-------------------------------------------------- */
+footer {
+  color: #999;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: bold;
+}
+footer h2{
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: bold;
+}
+footer p{
+  font-size: 30px;
+}
+/* BAGIAN VISI DAN MISI
+-------------------------------------------------- */
+#VM .container h1{
+  font-weight: bold;
+  font-size: 40px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  color: #fff;
+  margin-top: 50px;
+}
+#VM .container .well li{
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  color: #111;
+}
+#VM .container p{
+  color: #111;
+}
+/* CUSTOMIZE LOGIN
+-------------------------------------------------- */
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* Tombol Login pada form login */
+.navbar .navbar-right .container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+/* Cancel button pada login form */
+.navbar .navbar-right .container .cancelbtn {
+    width: 100%;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+/* Gambar kecil di modal login */
+.navbar .navbar-right .imgcontainer img.avatar {
+    width: auto;
+    border-radius: 40%;
+    position: relative;
+}
+/* warna tulisan dan ukuran input box modal login (input box) */
+.navbar .navbar-right .container {
+    width: auto;
+    color: #000;
+    font-family: "Roboto", helvetica, sans-serif;
+}
+/* warna tulisan label email dan password modal login */
+.navbar .navbar-right .container label{
+    font-size: 20px;
+    color: #fff;
+}
+/* link lupa password modal login */
+.navbar .navbar-right .container span.psw a{
+  color: #fff;
+  font-size: 18px;
+  background-color: transparent;
+
+}
+/* warna teks "FORGOT" di modal form */
+.navbar .navbar-right .container span.psw{
+  color: #888;
+}
+/* link lupa password modal login saat hover */
+.navbar .navbar-right .container span.psw a:hover{
+  color: none;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+  .modal-content {
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+    background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg1.jpg");
+    margin-top: 3%;
+    margin-left: auto; 
+    margin-bottom: 15%;
+    margin-right: auto;
+    border: 1px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    width: 60%;
+    text-align: center;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.8s;
+    animation: animatezoom 0.8s
+    -moz-transition: opacity 0.5s ease;
+      -webkit-transition: opacity 0.5s ease;
+      -ms-transition: opacity 0.5s ease;
+      transition: opacity 0.5s ease;
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale( 1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+
+/* Add Active Link Animation (Animasi Link Aktif) */
+.animate3 {
+    -webkit-animation: example2 1.1s;
+    -webkit-animation-iteration-count: infinite;
+    animation: example2 1.1s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes example2 {
+    0%   {background-color:#111;}
+    100% {background-color:#333;}
+}
+    
+@keyframes example2 {
+    0%   {background-color:#111;}
+    100% {background-color:#333;}
+}
+/* Add Active Link Animation (ADMIN LOGIN) */
+.animate4 {
+    -webkit-animation: admin 1.1s;
+    -webkit-animation-iteration-count: infinite;
+    animation: admin 1.1s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes admin {
+    0%   {background-color:#999;}
+    100% {background-color:#555;}
+}
+    
+@keyframes admin {
+    0%   {background-color:#999;}
+    100% {background-color:#555;}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+/* Warna Tulisan pada Kontak UKM */
+.main{
+  color: #999;
+  font-weight: bold;
+  text-align: center;
+}
+
+#ADMIN2 label{
+  color: #fff;
+  font-size: 30px;
+  text-align: left;
+}
+.pengurus .teks_pengurus h2{
+  color: #fff;
+}
+#tablelowadm .table-bordered a{
+  color: #f00;
+}
+/* CUSTOMIZE DROPDOWN, MOBILE VIEW
+-------------------------------------------------- */
+.navbar .navbar-collapse .dropdown .dropdown-menu{
+  background-color: #600000;
+  margin-bottom: 10px;
+  overflow-y: auto;
+  width: auto;
+}
+.navbar .navbar-collapse .dropdown .dropdown-menu li > a{
+  color: #FFFFFF;
+}
+.navbar .navbar-collapse .dropdown .dropdown-menu li > a:hover{
+  color: #FFFFFF;
+}
+.navbar .collapse .dropdown .dropdown-menu .active a{
+  color: #FFFFFF;
+  background-color: #333;
+}
+.navbar .collapse .dropdown .dropdown-menu .active a:hover{
+  color: #FFFFFF;
+  background-color: #333;
+}
+
+/* Customize MENU TOGGLE*/
+.navbar .navbar-header .navbar-toggle{
+  background-color: #666;
+}
+.navbar .navbar-header .navbar-toggle span{
+  background-color: #000;
+}
+
+
+/* BAGIAN MAIN PAGE */
+/* Wrapper */
+
+  @-moz-keyframes wrapper {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes wrapper {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-ms-keyframes wrapper {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes wrapper {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #wrapper_utama {
+    -moz-animation: wrapper 3s forwards;
+    -webkit-animation: wrapper 3s forwards;
+    -ms-animation: wrapper 3s forwards;
+    animation: wrapper 3s forwards;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+/* BG */
+
+  #bg_utama {
+    -moz-animation: bg 60s linear infinite;
+    -webkit-animation: bg 60s linear infinite;
+    -ms-animation: bg 60s linear infinite;
+    animation: bg 60s linear infinite;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+
+  /* Set your background with this */
+    background: #444 url("images/hexa.png") bottom left;
+    background-repeat: repeat-x;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+  }
+
+  @-moz-keyframes bg {
+    0% {
+      -moz-transform: translate3d(0,0,0);
+      -webkit-transform: translate3d(0,0,0);
+      -ms-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+    }
+
+    100% {
+      -moz-transform: translate3d(-2250px,0,0);
+      -webkit-transform: translate3d(-2250px,0,0);
+      -ms-transform: translate3d(-2250px,0,0);
+      transform: translate3d(-2250px,0,0);
+    }
+  }
+
+  @-webkit-keyframes bg {
+    0% {
+      -moz-transform: translate3d(0,0,0);
+      -webkit-transform: translate3d(0,0,0);
+      -ms-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+    }
+
+    100% {
+      -moz-transform: translate3d(-2250px,0,0);
+      -webkit-transform: translate3d(-2250px,0,0);
+      -ms-transform: translate3d(-2250px,0,0);
+      transform: translate3d(-2250px,0,0);
+    }
+  }
+
+  @-ms-keyframes bg {
+    0% {
+      -moz-transform: translate3d(0,0,0);
+      -webkit-transform: translate3d(0,0,0);
+      -ms-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+    }
+
+    100% {
+      -moz-transform: translate3d(-2250px,0,0);
+      -webkit-transform: translate3d(-2250px,0,0);
+      -ms-transform: translate3d(-2250px,0,0);
+      transform: translate3d(-2250px,0,0);
+    }
+  }
+
+  @keyframes bg {
+    0% {
+      -moz-transform: translate3d(0,0,0);
+      -webkit-transform: translate3d(0,0,0);
+      -ms-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+    }
+
+    100% {
+      -moz-transform: translate3d(-2250px,0,0);
+      -webkit-transform: translate3d(-2250px,0,0);
+      -ms-transform: translate3d(-2250px,0,0);
+      transform: translate3d(-2250px,0,0);
+    }
+  }
+
+  #bg_utama {
+    background-size: 2250px auto;
+    width: 6750px;
+  }
+
+/* Overlay */
+
+  @-moz-keyframes overlay {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes overlay {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-ms-keyframes overlay {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes overlay {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #overlay_utama {
+    -moz-animation: overlay 1.5s 1.5s forwards;
+    -webkit-animation: overlay 1.5s 1.5s forwards;
+    -ms-animation: overlay 1.5s 1.5s forwards;
+    animation: overlay 1.5s 1.5s forwards;
+    background-attachment: fixed, fixed;
+    background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
+    background-position: top left, center center;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+/* Main */
+
+  #main2 {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+  }
+
+    #main2:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      margin-right: 0;
+      vertical-align: middle;
+      width: 1px;
+    }
+
+
+/* Icon */
+
+  .icon {
+    text-decoration: none;
+    position: relative;
+    color: #999;
+  }
+  .icon:hover {
+    color: #555;
+  }
+
+    .icon:before {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none !important;
+    }
+
+    .icon > .label {
+      display: none;
+    }
+
+
+.alert{
+  font-size: 20px;
+  font-weight: bold;
+}
