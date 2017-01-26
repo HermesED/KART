@@ -6,25 +6,21 @@
 <body>
 	<section id="loginBox">
 			<a class="navbar-brand" href="home">
-                <h1 class="logo"><img src="assets/images/kart.jpg" alt="logo">SIGN UP</h1>
+                <h1 class="logo"><img src="<?= base_url()?>assets/images/kart.jpg" alt="logo">SIGN UP</h1>
             </a>
             <div id="signup">
 	            <label for="signup">
 					Already have one?
-					<a href="login"><button class="btn btn-lg btn-common">LOGIN</button></a>
+					<a href="<?= base_url()?>usr/login"><button class="btn btn-lg btn-common">LOGIN</button></a>
 				</label>
             </div>
 		<div class="container">
-
-	            <?php if($this->session->flashdata('msg')): ?>
-	            	<div class="alert alert-success" role="alert" align="center">
-	                   <?=$this->session->flashdata('msg')?>
-	                </div>
-	            <?php endif; ?>
-	            
-
-
-			<form action="signing" method="post" class="minimal">
+        <?php if($this->session->flashdata('msg')): ?>
+        	<div class="alert alert-success" role="alert" align="center">
+               <?=$this->session->flashdata('msg')?>
+            </div>
+        <?php endif; ?>
+			<form action="<?= base_url()?>usr/register" method="post" class="minimal">
 				<label for="nim">
 					NIM:
 					<input type="text" name="nim" id="nimsignup" placeholder="NIM (8 angka)" maxlength="8" pattern="\d{8}" required="required" title="8 Digit Angka NIM" />
