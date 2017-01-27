@@ -13,20 +13,20 @@
                         <h1>Welcome to K-ART</h1>
                         <p>Ini adalah website resmi UKM-Menggambar <a href="http://kharisma.ac.id" target="_blank">STMIK KHARISMA Makassar</a>. Jelajahi hasil karya dan kegiatan kami!</p>
                         <?php if($_SESSION['admin'] == 1||$_SESSION['admin']== 0){
-                                    echo "<a class='btn btn-common' href='usr/signup'>SIGN UP </a>";
-                                    echo "<a class='btn btn-common' href='usr/logout'>LOGOUT </a>";
+                                    echo "<a class='btn-common' href='" . base_url() . "usr/signup'>SIGN UP</a>";
+                                    echo "<a class='btn-common' href='" . base_url() . "usr/logout'>LOGOUT</a>";
                                 }
                                 else{
-                                    echo "<a class='btn btn-common' href='usr/signup'>SIGN UP </a>";
-                                    echo "<a class='btn btn-common' href='usr/login'>LOGIN</a>";
+                                    echo "<a class='btn-common' href='" . base_url() . "usr/signup'>SIGN UP</a>";
+                                    echo "<a class='btn-common' href='" . base_url() . "usr/login'>LOGIN</a>";
                                 }
                         ?>
                     </div>
-                    <img src="assets/images/home/slider/hill.png" class="slider-hill" alt="slider image">
-                    <img src="assets/images/home/slider/house.png" class="slider-house" alt="slider image">
-                    <img src="assets/images/home/slider/sun.png" class="slider-sun" alt="slider image">
-                    <img src="assets/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
-                    <img src="assets/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
+                    <img src="<?= base_url();?>assets/images/home/slider/hill.png" class="slider-hill" alt="slider image">
+                    <img src="<?= base_url();?>assets/images/home/slider/house.png" class="slider-house" alt="slider image">
+                    <img src="<?= base_url();?>assets/images/home/slider/sun.png" class="slider-sun" alt="slider image">
+                    <img src="<?= base_url();?>assets/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
+                    <img src="<?= base_url();?>assets/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
                 </div>
             </div>
         </div>
@@ -122,7 +122,7 @@
             <div class="row">
                 <div class="single-features">
                     <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="assets/images/home/image1.png" class="img-responsive" alt="">
+                        <img src="<?= base_url();?>assets/images/home/image1.png" class="img-responsive" alt="">
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                         <h2>Experienced and Enthusiastic</h2>
@@ -135,12 +135,12 @@
                         <P>Mollit eiusmod id chuck turducken laboris meatloaf pork loin tenderloin swine. Pancetta excepteur fugiat strip steak tri-tip. Swine salami eiusmod sint, ex id venison non. Fugiat ea jowl cillum meatloaf.</P>
                     </div>
                     <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="assets/images/home/image2.png" class="img-responsive" alt="">
+                        <img src="<?= base_url();?>assets/images/home/image2.png" class="img-responsive" alt="">
                     </div>
                 </div>
                 <div class="single-features">
                     <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="assets/images/home/image3.png" class="img-responsive" alt="">
+                        <img src="<?= base_url();?>assets/images/home/image3.png" class="img-responsive" alt="">
                     </div>
                     <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
                         <h2>Experienced and Enthusiastic</h2>
@@ -157,28 +157,28 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="clients text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <p><img src="assets/images/home/clients.png" class="img-responsive" alt=""></p>
+                        <p><img src="<?= base_url();?>assets/images/home/clients.png" class="img-responsive" alt=""></p>
                         <h1 class="title">Happy Clients</h1>
                         <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam, quis nostrud </p>
                     </div>
                     <div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="assets/images/home/client1.png" class="img-responsive" alt=""></a>
+                            <a href="#"><img src="<?= base_url();?>assets/images/home/client1.png" class="img-responsive" alt=""></a>
                         </div>
                         <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="assets/images/home/client2.png" class="img-responsive" alt=""></a>
+                            <a href="#"><img src="<?= base_url();?>assets/images/home/client2.png" class="img-responsive" alt=""></a>
                         </div>
                          <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="assets/images/home/client3.png" class="img-responsive" alt=""></a>
+                            <a href="#"><img src="<?= base_url();?>assets/images/home/client3.png" class="img-responsive" alt=""></a>
                         </div>
                          <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="assets/images/home/client4.png" class="img-responsive" alt=""></a>
+                            <a href="#"><img src="<?= base_url();?>assets/images/home/client4.png" class="img-responsive" alt=""></a>
                         </div>
                          <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="assets/images/home/client5.png" class="img-responsive" alt=""></a>
+                            <a href="#"><img src="<?= base_url();?>assets/images/home/client5.png" class="img-responsive" alt=""></a>
                         </div>
                          <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="assets/images/home/client6.png" class="img-responsive" alt=""></a>
+                            <a href="#"><img src="<?= base_url();?>assets/images/home/client6.png" class="img-responsive" alt=""></a>
                         </div>
                     </div>
                 </div>
