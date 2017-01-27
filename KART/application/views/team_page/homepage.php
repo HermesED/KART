@@ -1,7 +1,7 @@
 <head>
     <title><?= $title;?></title>
-    <link href="assets/css/animate.min.css" rel="stylesheet"> 
-    <link href="assets/css/lightbox.css" rel="stylesheet">
+    <link href="<?= base_url();?>assets/css/animate.min.css" rel="stylesheet"> 
+    <link href="<?= base_url();?>assets/css/lightbox.css" rel="stylesheet">
 </head><!--/head-->
 
 <body>
@@ -18,7 +18,7 @@
                                 }
                                 else{
                                     echo "<a class='btn btn-common' href='usr/signup'>SIGN UP </a>";
-                                    echo "<a class='btn-common' href='usr/login'>LOGIN</a>";
+                                    echo "<a class='btn btn-common' href='usr/login'>LOGIN</a>";
                                 }
                         ?>
                     </div>
