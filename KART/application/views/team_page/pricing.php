@@ -1,7 +1,7 @@
 <head>
     <title><?= $title;?></title>
-    <link href="css/prettyPhoto.css" rel="stylesheet"> 
-    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="<?= base_url();?>assets/css/prettyPhoto.css" rel="stylesheet"> 
+    <link href="<?= base_url();?>assets/css/animate.min.css" rel="stylesheet">
 </head><!--/head-->
 
 <body>
@@ -131,7 +131,7 @@
                             <li>Phasellus et metus <span><i class="fa fa-times"></i></span></li>
                             <li>Duis nec massa inter <span><i class="fa fa-check"></i></span></li>
                         </ul>
-                       <span class="btn-signup"><a href="#">sign up</a></span>
+                       <span class="btn-signup"><a href="<?= base_url();?>usr/signup">SIGN UP</a></span>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3">

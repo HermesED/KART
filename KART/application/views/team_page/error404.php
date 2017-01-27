@@ -9,12 +9,12 @@
                         <div class="text-center">
                             <div class="bg-404">
                                 <div class="error-image">                                
-                                    <img class="img-responsive" src="assets/images/404.png" alt="">  
+                                    <img class="img-responsive" src="<?= base_url();?>assets/images/404.png" alt="">  
                                 </div>
                             </div>
                             <h2>PAGE NOT FOUND</h2>
                             <p>The page you are looking for might have been removed, had its name changed.</p>
-                            <a href="home" class="btn btn-error">RETURN TO THE HOMEPAGE</a>
+                            <a href="<?= base_url();?>home" class="btn btn-error">RETURN TO THE HOMEPAGE</a>
                             <div class="social-link">
                                 <span><a href="#"><i class="fa fa-facebook"></i></a></span>
                                 <span><a href="#"><i class="fa fa-twitter"></i></a></span>
@@ -28,9 +28,9 @@
     </section>
     
 
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="<?= base_url();?>assets/js/jquery.js"></script>
+    <script src="<?= base_url();?>assets/js/bootstrap.min.js"></script>
+    <script src="<?= base_url();?>assets/js/wow.min.js"></script>
+    <script src="<?= base_url();?>assets/js/main.js"></script>
 </body>
 </html>
