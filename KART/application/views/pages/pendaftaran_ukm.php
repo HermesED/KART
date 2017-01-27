@@ -1,7 +1,7 @@
 <head>
     <title><?= $title;?></title>
 </head>
-    <form id="form" class="kart" method="post" action="daftar">
+    <form id="form" class="kart" method="post" action="<?= base_url();?>daftar">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-12">
