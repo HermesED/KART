@@ -1,29 +1,32 @@
 <?php 
 class Kegiatan extends CI_Controller{
-	function __construct(){
+	private $data;
+	public function __construct() {
         parent::__construct();
 		$this->load->model('kegiatan_model');
+        $this->data = [ 'page' => "Keg",
+                        'quotes' => "Check our activity list"
+                      ];
     }
 
-	function keg1( $id = ''){
-		$data['title'] = "KEGIATAN | K-ART";
-		$data['page']  = "Keg";
-		$data['judul'] = "Kegiatan";
-		$data['quotes'] = "Check our news and activities.";
-		$this->load->view('templates/Header');
-		
-		if( $id==''){
-			$this->load->view('templates/Nav', $data);
-			$this->data['kegiatan'] = $this->kegiatan_model->get_list_kegiatan();
-			$this->load->view('kegiatan/kegiatan', $data);
-			$this->load->view('templates/Footer');
-		} else {
-			$this->load->view('templates/Nav', $data);
-			$this->data['kegiatan'] = $this->kegiatan_model->get_kegiatan($id);
-			$this->load->view('kegiatan/kegiatandetail', $data);
-			$this->load->view('templates/Footer');
-		}
-	}
+	function keg( $idkeg = '' ) {
+        $this->load->view('templates/Header');
+        if( $idkeg==''){
+        	$this->data['title'] = "KEGIATAN | K-ART";
+        	$this->data['judul'] = "KEGIATAN";
+            $this->data['news'] = $this->kegiatan_model->get_list_kegiatan();
+            $this->load->view('templates/Nav', $this->data);
+            $this->load->view('kegiatan/kegiatan');
+            $this->load->view('templates/Footer');
+        } else {
+        	$this->data['title'] = "DETAIL KEGIATAN | K-ART";
+        	$this->data['judul'] = "DETAIL KEGIATAN";
+            $this->data['news'] = $this->kegiatan_model->get_kegiatan($idkeg);
+            $this->load->view('templates/Nav', $this->data);
+            $this->load->view('kegiatan/kegiatan_detail');
+            $this->load->view('templates/Footer');
+        }
+    }
 
     function kegiatan2(){
     	$data['title'] = "KEGIATAN2 | K-ART";
@@ -34,17 +37,6 @@ class Kegiatan extends CI_Controller{
 		$this->load->view('templates/Nav', $data);
 		$this->load->view('kegiatan/kegiatan2', $data);
 		$this->load->view('templates/Footer');		
-    }
-
-    function detailkeg(){
-    	$data['title'] = "DETAIL KEGIATAN | K-ART";
-    	$data['page']  = "Kegde";
-    	$data['judul'] = "Detail Kegiatan";
-		$data['quotes'] = "Check our detail news and activities.";
-		$this->load->view('templates/Header');
-		$this->load->view('templates/Nav', $data);
-		$this->load->view('kegiatan/kegiatan_detail', $data);
-		$this->load->view('templates/Footer');
     }
 
     function tlkeg(){
@@ -72,7 +64,7 @@ class Kegiatan extends CI_Controller{
 	function submit(){
         $this->kegiatan_model->save_kegiatan2();
         $this->session->set_flashdata('msg','DATA KEGIATAN TELAH DITAMBAHKAN');
-        redirect(base_url('kegiatan/kegiatan'));
+        redirect(base_url('kegiatan/entry'));
     }
 
 }	//End of Class
