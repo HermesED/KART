@@ -19,7 +19,7 @@
                             <li><a href=""><i class="fa fa-linkedin"></i></a></li>
                             <li>
                                 <?php if($_SESSION['admin'] == 1||$_SESSION['admin']== 0){
-                                    echo "<a class='btn-common' href='logout'>LOGOUT</a>";
+                                    echo "<a class='btn-common' href='usr/logout'>LOGOUT</a>";
                                 }
                                 else{
                                     echo "<a class='btn-common2'></a>";
