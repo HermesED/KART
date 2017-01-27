@@ -1,8 +1,8 @@
 <head>
     <title><?= $title;?></title>
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="assets/css/lightbox.css" rel="stylesheet"> 
-    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="<?= base_url();?>assets/css/prettyPhoto.css" rel="stylesheet">
+    <link href="<?= base_url();?>assets/css/lightbox.css" rel="stylesheet"> 
+    <link href="<?= base_url();?>assets/css/animate.min.css" rel="stylesheet">
 </head><!--/head-->
 
 <body>
