@@ -2,7 +2,7 @@
     <div id="bg_utama"></div>
     <div id="main_utama"></div>
     <?php
-    if($_SESSION['username']==FALSE){
+    if($this->$_SESSION['username']==FALSE){
             redirect(base_url("usr/login"));
     }
     ?>
