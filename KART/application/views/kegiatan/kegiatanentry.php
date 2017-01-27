@@ -1,7 +1,7 @@
 <head>
     <title><?= $title;?></title>
 </head>
-    <form id="form" class="kart" method="post" action="submitkeg">
+    <form id="form" class="kart" method="post" action="<?= base_url();?>kegiatan/sbt">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-12">
@@ -13,7 +13,7 @@
                             <input class="form-control" name="username" value="<?= $_SESSION['username']?>" type="hidden" />
                         </div>
                         <div class="form-group">
-                            <input id="tanggal" type="text" name="tanggal" class="form-control" maxlength="30" placeholder="Tanggal Kegiatan" required="required" />
+                            <input name="tanggal" class="form-control" type="hidden" />
                         </div>
                         <div class="form-group">
                             <input id="penulis" type="text" name="penulis" class="form-control" maxlength="50" placeholder="Nama Penulis (5 - 40 karakter)" pattern="^[a-zA-Z\s]{5,40}$" required="required" title="Info: MIN 5, MAX 40 Characters, NUMBERS and OPERATORS not allowed" />
