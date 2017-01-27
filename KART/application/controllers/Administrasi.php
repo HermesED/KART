@@ -30,7 +30,7 @@ class Administrasi extends CI_Controller{
 	}
 
 	public function batal(){
-		$this->Daftar_model->btlanggota();
+		$this->daftar_model->btlanggota();
 		$this->session->set_flashdata('msg','PEMBATALAN BERHASIL');
 		redirect( base_url('pembatalan') );
 	}
