@@ -1,7 +1,7 @@
 <head>
     <title><?= $title;?></title>
-    <link href="assets/css/animate.min.css" rel="stylesheet"> 
-    <link href="assets/css/lightbox.css" rel="stylesheet">
+    <link href="<?= base_url();?>assets/css/animate.min.css" rel="stylesheet"> 
+    <link href="<?= base_url();?>assets/css/lightbox.css" rel="stylesheet">
 </head><!--/head-->
 
 <body>
@@ -13,12 +13,12 @@
                         <h1>Welcome to K-ART</h1>
                         <p>Ini adalah website resmi UKM-Menggambar <a href="http://kharisma.ac.id" target="_blank">STMIK KHARISMA Makassar</a>. Jelajahi hasil karya dan kegiatan kami!</p>
                         <?php if($_SESSION['admin'] == 1||$_SESSION['admin']== 0){
-                                    echo "<a class='btn btn-common' href='signup'>SIGN UP </a>";
-                                    echo "<a class='btn btn-common' href='logout'>LOGOUT </a>";
+                                    echo "<a class='btn btn-common' href='usr/signup'>SIGN UP </a>";
+                                    echo "<a class='btn btn-common' href='usr/logout'>LOGOUT </a>";
                                 }
                                 else{
-                                    echo "<a class='btn btn-common' href='signup'>SIGN UP </a>";
-                                    echo "<a class='btn-common'>LOGIN</a>";
+                                    echo "<a class='btn btn-common' href='usr/signup'>SIGN UP </a>";
+                                    echo "<a class='btn btn-common' href='usr/login'>LOGIN</a>";
                                 }
                         ?>
                     </div>

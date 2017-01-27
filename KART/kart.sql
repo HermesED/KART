@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2017 at 02:01 PM
+-- Generation Time: Jan 27, 2017 at 02:51 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -113,22 +113,25 @@ INSERT INTO `dblogin` (`nim`, `username`, `password`, `admin`) VALUES
 
 CREATE TABLE IF NOT EXISTS `kegiatan` (
   `id` varchar(255) NOT NULL,
-  `tanggal` date NOT NULL,
+  `tanggal` char(255) NOT NULL,
   `username` varchar(40) NOT NULL,
   `judul` varchar(60) NOT NULL,
   `penulis` varchar(30) NOT NULL,
-  `kegiatan` varchar(255) NOT NULL
+  `kegiatan` varchar(1000) NOT NULL,
+  `like` int(11) NOT NULL DEFAULT '0',
+  `view` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kegiatan`
 --
 
-INSERT INTO `kegiatan` (`id`, `tanggal`, `username`, `judul`, `penulis`, `kegiatan`) VALUES
-('1484840197', '0000-00-00', '', 'ayam', 'ayam', '-- Isi Berita --\r\n\r\nayam mati'),
-('1484841794', '0000-00-00', '', 'aninglo', 'anjinglo', '-- Isi Berita --\r\n\r\nanjinglo'),
-('1485433574', '0000-00-00', 'hermesed23', 'addadasdsdasada', 'jakdjaldsjaldajl', 'nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnlalsdaladsllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll'),
-('1485433688', '0000-00-00', 'hermesed23', 'DASDASAFSAFASDDAS', 'asddsadsad', 'udul Kegiatan Wajib diisi.\r\n\r\nJudul Kegiatan sekurang-kurangnya 10 kata, maksimal 40 kata.\r\n\r\nNama Penulis Kegiatan Wajib Diisi.\r\n\r\nInformasi tentang kegiatan sekurang-kurangnya 100 kata. Maksimal 1000 kata\r\n\r\nADMIN yang menulis tentang suatu kegiatan aka');
+INSERT INTO `kegiatan` (`id`, `tanggal`, `username`, `judul`, `penulis`, `kegiatan`, `like`, `view`) VALUES
+('1485511004', '0000-00-00', 'hermesed23', 'SPOILER CHAPTER 229', 'TWENTY FIFTH BAM', 'SPOLIER RANK S EPS.229\r\n\r\nGOG = God of Guardians (arti: Dewa Dari Seluruh Para Penjaga) = (Penjaga Rice Pot)\r\n\r\nGOG : Bagaimana cara menjadi dewa?\r\n\r\nBam : ...Ya!\r\n\r\nGOG :  cara menjadi dewa... Permintaan yg aneh. Apa itu karena aku GOG?\r\n\r\nBam : Yah...Ku', 0, 3),
+('1485517018', '27 January 2017', 'hermesed23', 'TEST123456', 'Hermes', 'SPOLIER RANK S EPS.229\r\n\r\nGOG = God of Guardians (arti: Dewa Dari Seluruh Para Penjaga) = (Penjaga Rice Pot)\r\nGOG : Bagaimana cara menjadi dewa?\r\nBam : ...Ya!\r\nGOG :  cara menjadi dewa... Permintaan yg aneh. Apa itu karena aku GOG?\r\nBam : Yah...Kupikir kau mungkin tahu cara jadi dewa...\r\nGOG : Maaf tp aku tdk tahu tentang bgmn cara jadi dewa. Julukan ''GOG''tdk lebih dari sebutan yg diberikan para regular. Aku tdk sehebat itu.\r\nBam : Benarkah... Ok.. (Bam Pergi.)\r\nGOG : Hahhhh? Kau pergi....!!? Kau sangat dingin/cuek..!! Kau pst punya masalah diluar sana... Apa yg terjadi padamu?\r\nBam : Aku kehilangan teman2ku.. Tidak ada yg dpt kelakukan pada musuh yg sangat kuat....\r\nItu semua karenaaku memaksa pergi ke lantai kematian!..! Karaka sejak awal sdh ada disana karena aku...!\r\nSemuanya dlm bahaya krn aku..! Tapi tdk ada yg dpt kulakukan.. Pd akhirnya akulah yg ditolong oleh temanku..', 0, 22),
+('1485519497', '27 January 2017', 'hermesed23', 'hhhhhhhhhhhhhhhhhhhhhhhhhhhh', 'hhhhhhhhhhhhhhhh', 'SPOLIER RANK S EPS.229\r\n\r\nGOG = God of Guardians (arti: Dewa Dari Seluruh Para Penjaga) = (Penjaga Rice Pot)\r\n\r\nGOG : Bagaimana cara menjadi dewa?\r\n\r\nBam : ...Ya!\r\n\r\nGOG :  cara menjadi dewa... Permintaan yg aneh. Apa itu karena aku GOG?\r\n\r\nBam : Yah...Kupikir kau mungkin tahu cara jadi dewa...\r\n\r\nGOG : Maaf tp aku tdk tahu tentang bgmn cara jadi dewa. Julukan ''GOG''tdk lebih dari sebutan yg diberikan para regular. Aku tdk sehebat itu.\r\n\r\nBam : Benarkah... Ok.. (Bam Pergi.)\r\n\r\nGOG : Hahhhh? Kau pergi....!!? Kau sangat dingin/cuek..!! Kau pst punya masalah diluar sana... Apa yg terjadi padamu?\r\n\r\nBam : Aku kehilangan teman2ku.. Tidak ada yg dpt kelakukan pada musuh yg sangat kuat....\r\nItu semua karenaaku memaksa pergi ke lantai kematian!..! Karaka sejak awal sdh ada disana karena aku...!\r\nSemuanya dlm bahaya krn aku..! Tapi tdk ada yg dpt kulakukan.. Pd akhirnya akulah yg ditolong oleh temanku..\r\n', 0, 0),
+('1485523679', '27 January 2017', 'hermesed23', 'TESTTESTESTTEST', 'JSDjajkjdaskajds', 'SIU Blog\r\n\r\nThis week, we see a bit of Baam using the Divine Whirlpool technique.\r\nI had to think deeply about the visual I wanted for the Divine Whirlpool,\r\nand I, unlike how Shinsoo previously looked, wanted to go for a "light" based, or something primal...\r\nActually, Shinsoo itself was based on the concept that water is the source of life so it''s an extension of the same idea, in a way.\r\nAnd the Divine Whirlpool is not even in its final form yet, so you''ll get to see it developed further.\r\nEndorssi and Koon both developed in some manner, the details to be revealed in the Floor of Death. (Buy the previews..?)\r\nKoon and Endorssi will both go through a lot of changes in the Floor of Death.\r\nTaking the time I''m going to show lots of fun things.\r\nWe''re finally at the Floor of Death.', 0, 4),
+('1485523839', '27 January 2017', 'hermesed23', 'testestestes', 'ajdflajflsjadlads', 'SIU Blog\r\n\r\nThis week, we see a bit of Baam using the Divine Whirlpool technique.\r\nI had to think deeply about the visual I wanted for the Divine Whirlpool,\r\nand I, unlike how Shinsoo previously looked, wanted to go for a "light" based, or something primal...\r\nActually, Shinsoo itself was based on the concept that water is the source of life so it''s an extension of the same idea, in a way.\r\nAnd the Divine Whirlpool is not even in its final form yet, so you''ll get to see it developed further.\r\nEndorssi and Koon both developed in some manner, the details to be revealed in the Floor of Death. (Buy the previews..?)\r\nKoon and Endorssi will both go through a lot of changes in the Floor of Death.\r\nTaking the time I''m going to show lots of fun things.\r\nWe''re finally at the Floor of Death.\r\nSince this is the most important arc in the Hell Train arcs,\r\nI wasn''t sure if I should take a break prior, and I may take a break in between if needed.\r\nIt won''t be a short arc.', 0, 0);
 
 -- --------------------------------------------------------
 
