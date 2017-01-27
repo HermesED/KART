@@ -3,7 +3,7 @@
     <div id="main_utama"></div>
     <?php
     if($_SESSION['username']==FALSE){
-            redirect(base_url("login"));
+            redirect(base_url("usr/login"));
     }
     ?>
     <header id="header">      
