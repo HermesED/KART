@@ -1,12 +1,12 @@
 <head>
     <title><?= $title;?></title>
-    <link href="assets/css/lightbox.css" rel="stylesheet">  
-    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="<?= base_url();?>assets/css/lightbox.css" rel="stylesheet">  
+    <link href="<?= base_url();?>assets/css/animate.min.css" rel="stylesheet">
 </head><!--/head-->
 
 <body>
     <div class="logo-image">                                
-       <a href="home"><img class="img-responsive" src="assets/images/logo.png" alt=""> </a> 
+       <a href="home"><img class="img-responsive" src="<?= base_url();?>assets/images/logo.png" alt=""> </a> 
     </div>
      <section id="coming-soon">        
          <div class="container">
