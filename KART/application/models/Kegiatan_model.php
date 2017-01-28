@@ -16,7 +16,7 @@ class Kegiatan_model extends CI_Model {
 
 
     public function get_list_kegiatan(){
-        $sql = "SELECT n.judul, n.id id_keg, n.kegiatan, n.tanggal, n.penulis,
+        $sql = "SELECT n.judul, n.id id_keg, n.username, n.kegiatan, n.tanggal, n.penulis,
                        m.nim id_penulis
                 FROM kegiatan n
                 LEFT JOIN anggota_ukm m
@@ -32,7 +32,7 @@ class Kegiatan_model extends CI_Model {
     }
 
     public function get_kegiatan( $idkeg ){
-        $sql = "SELECT n.judul, n.id id_keg, n.kegiatan, n.tanggal, n.penulis,
+        $sql = "SELECT n.judul, n.id id_keg, n.username, n.kegiatan, n.tanggal, n.penulis,
                        m.nim id_penulis, n.like, n.view
                 FROM kegiatan n
                 LEFT JOIN anggota_ukm m
