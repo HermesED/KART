@@ -3262,3 +3262,37 @@ font-size: 20px;
   font-weight: bold;
   margin-left: 10px;
 }
+#footer .container p,h1,h2,h3,h4,h5,h6,blockquote{
+  font-weight: bold;
+}
+#footer .container .media .pull-left a{
+  font-weight: bold;
+}
+#footer .contact-info{
+  font-weight: bold;
+  font-size: 20px;
+}
+#VM .container h1{
+  color: #00AA9E;
+  font-weight: bold;
+}
+#VM .container li > p{
+  font-size: 23px;
+  text-align: center;
+  font-weight: bold;
+}
+#team .container h1{
+  color: #00AA9E;
+  font-weight: bold;
+}
+#team .container .person-info h2{
+  color: #00AA9E;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+#team .container .person-info p{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
