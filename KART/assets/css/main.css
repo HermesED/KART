@@ -3204,3 +3204,57 @@ font-size: 20px;
   font-weight: bold;
   font-size: 20px;
 }
+/** ACTIVITY TITLE **/
+#blog .container .single-blog .panel-heading h2{
+  font-weight: bold;
+}
+#blog .container .single-blog .panel-heading{
+  font-weight: bold;
+  font-size: 16px;
+}
+/** ACTIVITY NEWS **/
+#blog .container .single-blog .panel-body{
+  font-family: "Roboto", sans-serif, Helvetica;
+  font-size: 17px;
+}
+/** LINK READ MORE **/
+#blog .container .single-blog .panel-body a{
+  font-weight: bold;
+  font-size: 18px;
+}
+#blog .container .single-blog .post-bottom li{
+  font-weight: bold;
+  margin-left: 10px;
+}
+/** ACTIVITY NEWS **/
+#blog-details .container .single-blog p{
+  font-family: "Roboto", sans-serif, Helvetica;
+  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+}
+/** SEPARATOR LINE **/
+#blog-details .container .single-blog hr{
+  border: 2px solid;
+  color: #444;
+}
+/** ACTIVITY TITLE **/
+#blog-details .container .single-blog h1{
+  font-weight: bold;
+  color: #00aa9e;
+}
+/** HOW MANY READ **/
+#blog-details .container .single-blog h2{
+  color: red;
+  font-weight: 400;
+}
+/** POSTED BY WHO **/
+#blog-details .container .single-blog h3{
+  font-weight: bold;
+}
+#blog-details .container .single-blog h3 > a{
+  font-weight: bold;
+}
+#blog-details .container .single-blog h3 > a:hover{
+  color: #00aaff;
+}
