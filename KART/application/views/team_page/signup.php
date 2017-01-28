@@ -5,7 +5,7 @@
 
 <body>
 	<section id="loginBox">
-			<a class="navbar-brand" href="home">
+			<a class="navbar-brand" href="<?= base_url()?>home">
                 <h1 class="logo"><img src="<?= base_url()?>assets/images/kart.jpg" alt="logo">SIGN UP</h1>
             </a>
             <div id="signup">
