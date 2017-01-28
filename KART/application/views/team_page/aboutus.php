@@ -10,13 +10,58 @@
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <img src="<?= base_url();?>assets/images/aboutus/5.png" class="margin-bottom" alt="">
-                    <h1 class="margin-bottom">About Our Company</h1>
+                    <h1 class="margin-bottom">Tentang Kami</h1>
                     <p>Pork chop duis eu pig, labore sausage venison. Shankle fugiat duis, filet mignon tri-tip venison beef shank ribeye<br /> aliqua cillum dolore sed do in.</p>
                 </div>
             </div>
         </div>
     </section>
     <!--/#about-company-->
+    <title>
+  <?php echo $title;?>
+</title>
+
+
+    <!-- Visi Misi Section -->
+    <section id="VM">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>
+                        VISI K-ART
+                    </h1>
+                 <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="well">
+                        <ul class="h1">
+                            <li><p>Mengumpulkan Minat Dan Bakat Mahasiswa Dalam Bidang Menggambar</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>
+                        MISI K-ART
+                    </h1>
+                 <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="well">
+                        <ul class="h1">
+                            <li><p>Mengumpulkan Minat Dan Bakat Mahasiswa Dalam Bidang Menggambar</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
     
     <section id="services">
         <div class="container">
@@ -24,28 +69,28 @@
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <div class="single-service">
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                            <img src="<?= base_url();?>assets/images/home/icon1.png" alt="">
+                            <i class="icon icon1 fa fa-pencil fa-5x" aria-hidden="true"></i>
                         </div>
-                        <h2>Incredibly Responsive</h2>
-                        <p>Ground round tenderloin flank shank ribeye. Hamkevin meatball swine. Cow shankle beef sirloin chicken ground round.</p>
+                        <h2>Be Creative</h2>
+                        <p>Never stop to expand your creativity. Be creative is not hard. You just need a pencil.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
                     <div class="single-service">
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
-                            <img src="<?= base_url();?>assets/images/home/icon2.png" alt="">
+                            <i class="icon icon2 fa fa-image fa-5x" aria-hidden="true"></i>
                         </div>
-                        <h2>Superior Typography</h2>
-                        <p>Hamburger ribeye drumstick turkey, strip steak sausage ground round shank pastrami beef brisket pancetta venison.</p>
+                        <h2>Art, Design, Images</h2>
+                        <p>With creativity and a pencil, you can make an art and images.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
                     <div class="single-service">
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
-                            <img src="<?= base_url();?>assets/images/home/icon3.png" alt="">
+                            <i class="icon icon3 fa fa-star fa-5x" aria-hidden="true"></i>
                         </div>
-                        <h2>Swift Page Builder</h2>
-                        <p>Venison tongue, salami corned beef ball tip meatloaf bacon. Fatback pork belly bresaola tenderloin bone pork kevin shankle.</p>
+                        <h2>Best Result</h2>
+                        <p>With hard-work and years of experience, your creativity are unstopabble.</p>
                     </div>
                 </div>
             </div>
@@ -53,43 +98,15 @@
     </section>
     <!--/#services-->
 
-    <section id="action">
-        <div class="vertical-center">
-             <div class="container">
-                <div class="row">
-                    <div class="action count">
-                        <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <h1 class="timer bold" data-to="7000" data-speed="3000" data-from="0"></h1>   
-                            <h3>Happy Clients</h3>
-                        </div>
-                        <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <h1 class="timer bold" data-to="12" data-speed="3000" data-from="0"></h1>   
-                            <h3>Years in Business</h3> 
-                        </div>
-                        <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <h1 class="timer bold" data-to="432" data-speed="3000" data-from="0"></h1> 
-                            <h3>Cups of Coffee</h3>
-                        </div>
-                        <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <h1 class="timer bold" data-to="145" data-speed="3000" data-from="0"></h1> 
-                            <h3>Total Project</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-   </section>
-    <!--/#action-->
-
     <section id="company-information" class="padding-top">
         <div class="container">
             <div class="row">
                 <div class="about-us">
                     <div class="col-sm-7 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
-                        <h2 class="bold">About Triangle</h2>
+                        <h2 class="bold">About K-Art</h2>
                         <div class="row">
                             <div class="col-sm-5">
-                                <img src="<?= base_url();?>assets/images/aboutus/6.png" class="img-responsive" alt="">
+                                <img src="<?= base_url();?>assets/images/kart-big.png" class="img-responsive" alt="">
                             </div>
                             <div class="col-sm-7">
                                 <h3 class="top-zero">Who we are</h3>
@@ -103,17 +120,17 @@
                             <div class="single-skill">
                                 <h3>Design</h3>
                                 <div class="progress">
-                                    <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  data-transition="35">35%</div>
-                                </div>
-                            </div>
-                            <div class="single-skill">
-                                <h3>HTML</h3>
-                                <div class="progress">
                                     <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  data-transition="80">80%</div>
                                 </div>
                             </div>
                             <div class="single-skill">
-                                <h3>PHP</h3>
+                                <h3>Creativity</h3>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  data-transition="70">70%</div>
+                                </div>
+                            </div>
+                            <div class="single-skill">
+                                <h3>Art</h3>
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  data-transition="60">60%</div>
                                 </div>
@@ -129,9 +146,8 @@
     <section id="team">
         <div class="container">
             <div class="row">
-                <h1 class="title text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">Meet the Team</h1>
-                <p class="text-center wow fadeInDown" data-wow-duration="400ms" data-wow-delay="400ms">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-                Ut enim ad minim veniam, quis nostrud </p>
+                <h1 class="title text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">K-ART LEADERS</h1>
+                <h2 class="text-center wow fadeInDown" data-wow-duration="400ms" data-wow-delay="400ms">Current Leaders, Ex-Leaders, Leaders (Alumni), UKM Seni Menggambar K-ART.<br></h2>
                 <div id="team-carousel" class="carousel slide wow fadeIn" data-ride="carousel" data-wow-duration="400ms" data-wow-delay="400ms">
                     <!-- Indicators -->
                     <ol class="carousel-indicators visible-xs">
@@ -158,6 +174,7 @@
                                     <div class="person-info">
                                         <h2>John Doe</h2>
                                         <p>CEO &amp; Developer</p>
+                                        <p>(Periode)</p>
                                     </div>
                                 </div>
                             </div>
@@ -178,6 +195,7 @@
                                     <div class="person-info">
                                         <h2>John Doe</h2>
                                         <p>CEO &amp; Developer</p>
+                                        <p>(Periode)</p>
                                     </div>
                                 </div>
                             </div>
@@ -198,6 +216,7 @@
                                     <div class="person-info">
                                         <h2>John Doe</h2>
                                         <p>CEO &amp; Developer</p>
+                                        <p>(Periode)</p>
                                     </div>
                                 </div>
                             </div>
@@ -218,6 +237,7 @@
                                     <div class="person-info">
                                         <h2>John Doe</h2>
                                         <p>CEO &amp; Developer</p>
+                                        <p>(Periode)</p>
                                     </div>
                                 </div>
                             </div>
@@ -240,6 +260,7 @@
                                     <div class="person-info">
                                         <h2>John Doe</h2>
                                         <p>CEO &amp; Developer</p>
+                                        <p>(Periode)</p>
                                     </div>
                                 </div>
                             </div>
@@ -260,6 +281,7 @@
                                     <div class="person-info">
                                         <h2>John Doe</h2>
                                         <p>CEO &amp; Developer</p>
+                                        <p>(Periode)</p>
                                     </div>
                                 </div>
                             </div>
@@ -280,6 +302,7 @@
                                     <div class="person-info">
                                         <h2>John Doe</h2>
                                         <p>CEO &amp; Developer</p>
+                                        <p>(Periode)</p>
                                     </div>
                                 </div>
                             </div>
@@ -300,6 +323,7 @@
                                     <div class="person-info">
                                         <h2>John Doe</h2>
                                         <p>CEO &amp; Developer</p>
+                                        <p>(Periode)</p>
                                     </div>
                                 </div>
                             </div>
