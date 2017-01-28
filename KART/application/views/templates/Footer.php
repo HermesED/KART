@@ -2,29 +2,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center bottom-separator">
-                    <img src="assets/images/home/under.png" class="img-responsive inline" alt="">
+                    <img src="<?= base_url();?>assets/images/home/under.png" class="img-responsive inline" alt="">
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="testimonial bottom">
                         <h2>Testimonial</h2>
                         <div class="media">
                             <div class="pull-left">
-                                <a href="#"><img src="assets/images/home/profile1.png" alt=""></a>
+                                <a href="#"><img src="<?= base_url();?>assets/images/home/profile1.png" alt="JCF image not available"></a>
                             </div>
                             <div class="media-body">
-                                <blockquote>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.</blockquote>
-                                <h3><a href="#">- Jhon Kalis</a></h3>
+                                <blockquote>Bad design is smoke, while good design is a mirror.</blockquote>
+                                <h3><a href="#">- Juan-Carlos Fernandez</a></h3>
                             </div>
                          </div>
                         <div class="media">
                             <div class="pull-left">
-                                <a href="#"><img src="assets/images/home/profile2.png" alt=""></a>
+                                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Steve_Jobs_WWDC07.jpg/800px-Steve_Jobs_WWDC07.jpg" target="_blank"><img src="<?= base_url();?>assets/images/home/stevejobs2.jpg" alt="Steve Jobs"></a>
                             </div>
                             <div class="media-body">
-                                <blockquote>Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.</blockquote>
-                                <h3><a href="">- Abraham Josef</a></h3>
+                                <blockquote>Design is a funny word. Some people think design means how it looks. But of course, if you dig deeper, it’s really how it works.</blockquote>
+                                <h3><a href="https://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">- Steve Jobs</a></h3>
                             </div>
-                        </div>   
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Portrait_de_Picasso%2C_1908.jpg/230px-Portrait_de_Picasso%2C_1908.jpg" target="_blank"><img src="<?= base_url();?>assets/images/home/pablopicasso2.jpg" alt="Pablo Picasso in 1908"></a>
+                            </div>
+                            <div class="media-body">
+                                <blockquote>Art is the lie that reveals the truth.</blockquote>
+                                <h3><a href="https://en.wikipedia.org/wiki/Pablo_Picasso" target="_blank">-  Pablo Picasso</a></h3>
+                            </div>
+                         </div>   
                     </div> 
                 </div>
                 <div class="col-md-3 col-sm-6">
