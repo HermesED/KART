@@ -30,7 +30,7 @@
                                     <div class="panel <?=$panel?>">
                                         <div class="panel-heading">
                                             <h2 class="post-title bold"><?= $berita['judul'] ?></h2>
-                                            <?= $berita['penulis'] ." - ". $berita['tanggal']  ?>
+                                            Ditulis: <?= $berita['penulis'] ." - ". $berita['tanggal']  ?>
                                         </div>
                                         <div class="panel-body">
                                             <?= $this->kegiatan_model->foreword($berita['kegiatan'])?><br />
