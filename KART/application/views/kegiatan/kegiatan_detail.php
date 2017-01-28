@@ -8,7 +8,6 @@
 </head><!--/head-->
 
 <body>
-
     <section id="blog-details" class="padding-top">
         <div class="container">
             <div class="row">
@@ -26,9 +25,14 @@
                                     $_SESSION['idkeg'] = $news['id_keg'];
                                 ?>
                                 <div class="post-content overflow">
-                                    <h2 class="post-title bold"><?= $news['judul'] ?></h2>
-                                    <p>dibaca <?= $news['view'] ?> kali</p>
-                                    <h3 class="post-author">Diposting oleh<a href="#"><?= $news['penulis'] ?></a></h3>
+                                    <h1 class="post-title bold"><?= $news['judul'] ?></h1>
+                                    <h2>Berita Kegiatan Ini Telah Dibaca <?= $news['view'] ?> Kali</h2>
+                                    <h3 class="post-author">Diposting oleh 
+                                    <?php if( $_SESSION['admin'] == 1 ){
+                                        $rank = "admin ";
+                                        $adm = $_SESSION['username'];}
+                                    ?>
+                                <?= $rank;?> <a href="#"><?= $adm;?></a></h3><hr>
                                     <p>
                                     <?php
                                         $isi = str_replace( array("\r\n", "\n", "\r"), '<br />' , $news['kegiatan'] ) ;
