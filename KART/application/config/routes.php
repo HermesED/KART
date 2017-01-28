@@ -42,7 +42,10 @@ $route['kegiatan'] = 'kegiatan/keg';
 $route['kegiatan/entry'] = 'kegiatan/entrykeg';
 $route['kegiatan/sbt'] = 'kegiatan/submit';
 $route['kegiatan/likekeg'] = 'kegiatan/likekeg';
+
+$route['timeline_keg'] = 'kegiatan/tlkeg';
 $route['kegiatan/(:any)'] = 'kegiatan/keg/$1';
+$route['timeline_keg/(:any)'] = 'kegiatan/tlkeg/$1';
 
 $route['404_override'] = 'main/error404';
 $route['translate_uri_dashes'] = FALSE;

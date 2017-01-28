@@ -28,11 +28,10 @@
                                     <h1 class="post-title bold"><?= $news['judul'] ?></h1>
                                     <h2>Berita Kegiatan Ini Telah Dibaca <?= $news['view'] ?> Kali</h2>
                                     <h3 class="post-author">Diposting oleh 
-                                    <?php if( $_SESSION['admin'] == 1 ){
-                                        $rank = "admin ";
-                                        $adm = $_SESSION['username'];}
+                                    <?php if( $_SESSION['admin']==1||$_SESSION['admin']==0 ){
+                                        $rank = "admin ";}
                                     ?>
-                                <?= $rank;?> <a href="#"><?= $adm;?></a></h3><hr>
+                                <?= $rank;?> <a href="#"><?= $news['username'] ?></a></h3><hr>
                                     <p>
                                     <?php
                                         $isi = str_replace( array("\r\n", "\n", "\r"), '<br />' , $news['kegiatan'] ) ;

@@ -11,7 +11,7 @@
                 <div class="main-slider">
                     <div class="slide-text">
                         <h1>Welcome to K-ART</h1>
-                        <p>Ini adalah website resmi UKM-Menggambar <a href="http://kharisma.ac.id" target="_blank">STMIK KHARISMA Makassar</a>. Jelajahi hasil karya dan kegiatan kami!</p>
+                        <p>Ini adalah website resmi UKM-Menggambar <a href="http://kharisma.ac.id" target="_blank">STMIK KHARISMA Makassar</a>. Jelajahi hasil karya dan kegiatan kami!</p><br>
                         <?php if($_SESSION['admin'] == 1||$_SESSION['admin']== 0){
                                     echo "<a class='btn-common' href='" . base_url() . "usr/signup'>SIGN UP</a>";
                                     echo "<a class='btn-common' href='" . base_url() . "usr/logout'>LOGOUT</a>";
