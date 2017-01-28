@@ -3258,3 +3258,7 @@ font-size: 20px;
 #blog-details .container .single-blog h3 > a:hover{
   color: #00aaff;
 }
+#blog-details .container .single-blog .post-bottom li{
+  font-weight: bold;
+  margin-left: 10px;
+}
