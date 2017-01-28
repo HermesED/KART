@@ -17,15 +17,17 @@ class Usr extends CI_Controller{
 		if( $this->daftar_model->userada( $this->input->post('username') )) {
 			if( $this->daftar_model->passwordok( $this->input->post('password') ) ){
 				// user OK
+				$data_session = array('status' => "login");
+				$this->session->set_userdata($data_session);
 				redirect( base_url().'home'); }
 			else{
 				// password salah
-				redirect( base_url().'usr/login/2');
-				redirect( base_url('usr/login') ); }
+				redirect( base_url().'usr/login/2'); }
 		} else{
 			// username salah
 			redirect( base_url().'usr/login/1');
 		}
+
 	}
 	
 	public function sp(){
