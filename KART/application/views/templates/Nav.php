@@ -2,9 +2,9 @@
     <div id="bg_utama"></div>
     <div id="main_utama"></div>
     <?php
-    if($this->$_SESSION['username']==FALSE){
+    if($this->session->userdata('status') != "login"){
             redirect(base_url("usr/login"));
-    }
+        }
     ?>
     <header id="header">      
         <div class="container">
@@ -58,14 +58,14 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="<?base_url();?>/home">
+                    <a class="navbar-brand" href="<?= base_url();?>home">
                         <h1 class="logo"><img src="<?= base_url();?>assets/images/kart.jpg" alt="logo">K-ART</h1>
                     </a>
                     
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li <?php if($page == "Home") echo "class='active'";?>><a href="home">Home</a></li>
+                        <li <?php if($page == "Home") echo "class='active'";?>><a href="<?= base_url();?>home">Home</a></li>
                         <li class="dropdown"><a href="#">Pages <i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
                                 <li <?php if($page == "Abt") echo "class='active'";?>><a href="<?= base_url();?>about">About</a></li>
