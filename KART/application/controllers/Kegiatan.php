@@ -6,7 +6,7 @@ class Kegiatan extends CI_Controller{
 		$this->load->model('kegiatan_model');
         $this->data = [ 'page' => "Keg",
                         'quotes' => "Check our activity list"
-                      ];            
+                      ];
     }
 
 	function keg( $idkeg = '' ) {
@@ -66,12 +66,20 @@ class Kegiatan extends CI_Controller{
 		$data['quotes'] = "Input, Post, and Share!";
 		$this->load->view('templates/Header');
 		$this->load->view('templates/Nav', $data);
-		$this->load->view('kegiatan/kegiatanentry', $data);		
+        $this->kegiatan_model->proteksi();
+		$this->load->view('kegiatan/kegiatanentry', $data);
+			
 	}
 
 	function submit(){
+        $this->kegiatan_model->proteksi();
         $this->kegiatan_model->save_kegiatan2();
         $this->session->set_flashdata('msg','DATA KEGIATAN TELAH DITAMBAHKAN');
         redirect(base_url('kegiatan/entry'));
     }
+
+    public function likekegiatan(){
+        echo $this->kegiatan_model->tambahlike( $_SESSION['idkeg']);
+    }
+
 }	//End of Class
