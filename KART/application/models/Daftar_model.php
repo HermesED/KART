@@ -90,6 +90,12 @@ class Daftar_model extends CI_Model {
     function getuser($username){
         $query = $this->db->get_where( 'dblogin', array( 'username' => $username) );
     }
+    
+    function proteksi(){
+        if($_SESSION['admin']!=1){
+            redirect(base_url('error'));
+        }
+    }
 
 
 }//END
