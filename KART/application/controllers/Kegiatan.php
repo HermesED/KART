@@ -9,6 +9,7 @@ class Kegiatan extends CI_Controller{
                         'quotes' => "Check our activity list"
                       ];
     }
+
 	function keg( $idkeg = '' ) {
         $this->load->view('templates/Header');
         if( $idkeg==''){
@@ -27,6 +28,7 @@ class Kegiatan extends CI_Controller{
             $this->load->view('templates/Footer');
         }
     }
+
     function kegiatan2(){
     	$data['title'] = "KEGIATAN2 | K-ART";
     	$data['page']  = "Keg2";
@@ -37,6 +39,7 @@ class Kegiatan extends CI_Controller{
 		$this->load->view('kegiatan/kegiatan2', $data);
 		$this->load->view('templates/Footer');		
     }
+
     function tlkeg($idkeg = ''){
         $this->load->view('templates/Header');
         if( $idkeg==''){
@@ -56,6 +59,7 @@ class Kegiatan extends CI_Controller{
             $this->load->view('templates/Footer');
         }
     }
+
     function entrykeg(){
 		$data['title'] = "ENTRY KEGIATAN | K-ART";
 		$data['page']  = "EK";
@@ -64,9 +68,11 @@ class Kegiatan extends CI_Controller{
 		$this->load->view('templates/Header');
 		$this->load->view('templates/Nav', $data);
         $this->daftar_model->proteksi();
-		$this->load->view('kegiatan/kegiatanentry', $data)		
+		$this->load->view('kegiatan/kegiatanentry', $data);
+			
 	}
-    function submit(){
+
+	function submit(){
         $this->daftar_model->proteksi();
         $this->kegiatan_model->save_kegiatan2();
         $this->session->set_flashdata('msg','DATA KEGIATAN TELAH DITAMBAHKAN');
@@ -76,4 +82,5 @@ class Kegiatan extends CI_Controller{
     public function likekegiatan(){
         echo $this->kegiatan_model->tambahlike( $_SESSION['idkeg']);
     }
+
 }	//End of Class
