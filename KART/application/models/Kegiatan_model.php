@@ -74,9 +74,4 @@ class Kegiatan_model extends CI_Model {
             return false;
         }
     }
-    function proteksi(){
-        if($_SESSION['admin']!=1){
-            redirect(base_url('error'));
-        }
-    }
 }
