@@ -39,7 +39,7 @@ class Usr extends CI_Controller{
 	public function register(){
 		$this->daftar_model->dftrlogin();
 		$this->session->set_flashdata('msg','AKUN ANDA TELAH TERDAFTAR');
-        redirect(base_url('usr/register'));
+        redirect(base_url('usr/signup'));
     }
 
 	public function logout(){
