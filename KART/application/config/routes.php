@@ -25,9 +25,6 @@ $route['daftar']  = 'administrasi/dftr';
 $route['pembatalan'] = 'administrasi/btl';
 $route['batal'] = 'administrasi/batal';
 
-$route['kegiatan2'] = 'kegiatan/kegiatan2';
-$route['timeline_keg'] = 'kegiatan/tlkeg';
-
 $route['gallery'] = 'gallery/g1';
 $route['gallery2'] = 'gallery/g2';
 $route['gallerydetail'] = 'gallery/g_detail';
@@ -41,11 +38,14 @@ $route['entrymb'] = 'member/input_anggota';
 $route['kegiatan'] = 'kegiatan/keg';
 $route['kegiatan/entry'] = 'kegiatan/entrykeg';
 $route['kegiatan/sbt'] = 'kegiatan/submit';
-$route['kegiatan/likekeg'] = 'kegiatan/likekeg';
+$route['kegiatan/likekegiatan'] = 'kegiatan/likekegiatan';
+$route['kegiatan/update'] = 'kegiatan/update';
 
 $route['timeline_keg'] = 'kegiatan/tlkeg';
 $route['kegiatan/(:any)'] = 'kegiatan/keg/$1';
 $route['timeline_keg/(:any)'] = 'kegiatan/tlkeg/$1';
+
+$route['kegiatan2'] = 'kegiatan/kegiatan2';
 
 $route['404_override'] = 'main/error404';
 $route['translate_uri_dashes'] = FALSE;
