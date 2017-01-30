@@ -79,8 +79,14 @@ class Kegiatan extends CI_Controller{
         redirect(base_url('kegiatan/entry'));
     }
 
-    public function likekegiatan(){
-        echo $this->kegiatan_model->tambahlike( $_SESSION['idkeg']);
+    public function likenews(){
+        echo $this->kegiatan_model->tambahlike( $_SESSION['idnews']);
+    }
+
+    public function update(){
+        $file = $_SESSION['idkeg'].".jpg";
+        move_uploaded_file($_FILES['foto']['tmp_name'], './assets/images/kegiatan/'.$file);
+        redirect( base_url().'kegiatan');
     }
 
 }	//End of Class
