@@ -31,6 +31,11 @@ $route['gallerydetail'] = 'gallery/g_detail';
 
 $route['members'] = 'member/m1';
 $route['users']	= 'member/userpage';
+
+$route['usr/profile'] = 'usr/user_profile';
+$route['usr/edit_profile'] = 'usr/editprofile';
+
+$route['usr/upd_user'] = 'usr/upd_user';
 $route['member_admin'] = 'member/entrym';
 $route['entrymb'] = 'member/input_anggota';
 
