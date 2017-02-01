@@ -40,7 +40,8 @@
                                     $adm  = "";
                                 }
                             ?>
-                                <?= $rank;?><?= $adm;?>    
+                                <?= $rank;?><a href="<?= base_url();?>usr/profile"> <?= $adm;?>
+                            <img class="img-circle" src="<?= base_url()?>assets/images/users/<?=$_SESSION['username']?>.jpg" /></a> 
                             </p>
                             </li>
                         </ul>
