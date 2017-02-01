@@ -4,10 +4,14 @@
     <link href="<?= base_url();?>assets/css/animate.min.css" rel="stylesheet">
     <script>var switchTo5x=true;</script>
     <script src="http://w.sharethis.com/button/buttons.js"></script>
+    <script src="<?= base_url();?>assets/js/ajax.js"></script>
     <script>stLight.options({publisher: "7e8eb33b-fbe0-4915-9b93-09490e3d10df", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 </head><!--/head-->
 
 <body>
+<?php
+    $_SESSION['idkeg'] = $news['id_keg'];
+?>
     <section id="blog-details" class="padding-top">
         <div class="container">
             <div class="row">
@@ -16,14 +20,44 @@
                          <div class="col-md-12 col-sm-12">
                             <div class="single-blog blog-details two-column">
                                 <div class="post-thumb">
-                                    <a href="#"><img src="<?= base_url();?>assets/images/blog/7.jpg" class="img-responsive" alt=""></a>
-                                    <div class="post-overlay">
-                                        <span class="uppercase"><a href="#">14 <br><small>Feb</small></a></span>
+                                    <?php
+                                        $ff = './assets/images/kegiatan/'.$_SESSION['idkeg'].'.jpg';
+                                        if( file_exists( $ff ) ) {
+                                    ?>
+                                            <img src="<?= base_url()?>assets/images/kegiatan/<?=$_SESSION['idkeg']?>.jpg" />
+                                    <?php
+                                        }
+                                    ?>
+                            <?php if($_SESSION['admin']==1):?>
+                                <form id="form" class="kart" action="<?= base_url()?>kegiatan/update" method="post" enctype="multipart/form-data">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="common-form bottom">
+                                                    <div class="form-group">
+                                                        <input type="hidden" class="form-control" name="nama" value="<?= $news['id_keg']?>" required="required">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="file" class="form-control" name="foto">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btn btn-common" value="Update"><i class="fa fa-image-o fa-2x"> Change Picture</i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-sm-8">
+                                                <h2><span class="fa fa-exclamation-triangle fa-1x" aria-hidden="true"> INFO</span></h2><hr>
+                                                    <li>
+                                                        <p>
+                                                            For a better look and view of the picture, it is recommended to upload at least only horizontal images.
+                                                        </p>
+                                                    </li>
+                                            </div>
+                                        </div>
                                     </div>
+                                </form>
+                            <?php endif; ?>                                  
                                 </div>
-                                <?php
-                                    $_SESSION['idkeg'] = $news['id_keg'];
-                                ?>
                                 <div class="post-content overflow">
                                     <h1 class="post-title bold"><?= $news['judul'] ?></h1>
                                     <h2>Berita Kegiatan Ini Telah Dibaca <?= $news['view'] ?> Kali</h2>
@@ -40,6 +74,8 @@
                                     </p>
                                     <div class="post-bottom overflow">
                                         <ul class="nav navbar-nav post-nav">
+                                        <i class="fa fa-fw fa-thumbs-o-up" id="likenews"></i>
+                                        <span id="jumlahlike"><?= $news['like'] ?></span>
                                             <li><a href="#"><i class="fa fa-tag"></i>Creative</a></li>
                                             <li><a href="#"><i class="fa fa-heart"></i>32 Love</a></li>
                                             <li><a href="#"><i class="fa fa-comments"></i>3 Comments</a></li>

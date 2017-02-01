@@ -6,7 +6,7 @@
 
 <body>
     <div class="logo-image">                                
-       <a href="home"><img class="img-responsive" src="<?= base_url();?>assets/images/logo.png" alt=""> </a> 
+       <a href="<?= base_url();?>home"><img class="img-responsive" src="<?= base_url();?>assets/images/kart.jpg" alt=""> </a> 
     </div>
      <section id="coming-soon">        
          <div class="container">

@@ -86,15 +86,25 @@ class Daftar_model extends CI_Model {
         }
         return FALSE;
     }
-
-    function getuser($username){
-        $query = $this->db->get_where( 'dblogin', array( 'username' => $username) );
-    }
     
     function proteksi(){
         if($_SESSION['admin']!=1){
             redirect(base_url('error'));
         }
+    }
+
+    public function getuser($username){
+        $query = $this->db->get_where( 'dblogin', array( 'username' => $username) );
+        if(( $query->row_array() ) ) {
+            return $query->row_array();
+        }
+        return false;
+    }
+
+    public function updateuser(){
+        $this->db->where('username', $_SESSION['username'] );
+        $data = [ 'username' => $this->input->post('username') ];
+        $this->db->update( 'dblogin', $data );
     }
 
 

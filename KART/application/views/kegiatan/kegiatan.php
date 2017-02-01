@@ -7,7 +7,7 @@
 <body>
 <?php
     foreach ( $news as $berita ) {
-        if( substr( $berita['tanggal'], 0, 3 ) == date('Y-m-d') ){
+        if( substr( $berita['tanggal'], 0, 4 ) == date('Y-m-d') ){
             $panel = 'panel-danger';
         } else {
             $panel = 'panel-info';
@@ -21,7 +21,14 @@
                          <div class="col-sm-12 col-md-12">
                             <div class="single-blog single-column">
                                 <div class="post-thumb">
-                                    <a href="kegiatandetail"><img src="<?= base_url();?>assets/images/blog/7.jpg" class="img-responsive" alt=""></a>
+                                     <?php
+                                        $ff = './assets/images/kegiatan/'.$berita['id_keg'].'.jpg';
+                                        if( file_exists( $ff ) ) {
+                                    ?>
+                                            <img src="<?= base_url()?>assets/images/kegiatan/<?= $berita['id_keg'] ?>.jpg" />
+                                    <?php
+                                        }
+                                    ?>
                                     <div class="post-overlay">
                                        <span class="uppercase"><a href="#">14 <br><small>Feb</small></a></span>
                                    </div>

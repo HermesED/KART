@@ -46,4 +46,37 @@ class Usr extends CI_Controller{
 		session_destroy();
 		redirect('usr/login');
 	}
+
+    public function user_profile(){
+    	$data['title'] = "USER PROFILE | K-ART";
+        $data['judul'] = "USER PROFILE";
+        $data['page'] = "UP";
+        $data['quotes'] = "Your Profile";
+		$data['user'] = $this->daftar_model->getuser( $_SESSION['username'] );
+		$this->load->view('templates/Header');
+		$this->load->view('templates/Nav', $data);
+		$this->load->view('pages/usr_profile', $data);
+		$this->load->view('templates/Footer');
+	}
+
+    
+    public function editprofile(){
+    	$data['title'] = "EDIT PROFILE | K-ART";
+        $data['judul'] = "EDIT PROFILE";
+        $data['page'] = "ED";
+        $data['quotes'] = "Edit Your Profile";
+		$data['user'] = $this->daftar_model->getuser( $_SESSION['username'] );
+		$this->load->view('templates/Header');
+		$this->load->view('templates/Nav', $data);
+		$this->load->view('pages/editprofile', $data);
+		$this->load->view('templates/Footer');
+	}
+
+	public function upd_user(){
+		$this->daftar_model->updateuser();
+		$file = $_SESSION['username'].".jpg";
+		move_uploaded_file($_FILES['foto']['tmp_name'], './assets/images/users/'.$file);
+		redirect( base_url().'usr/logout');
+	}
+
 }

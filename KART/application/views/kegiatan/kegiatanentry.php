@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 text-center bottom-separator">
-                    <img src="assets/images/home/under.png" class="img-responsive inline" alt="">
+                    <img src="<?= base_url();?>assets/images/home/under.png" class="img-responsive inline" alt="">
                 </div>
             </div>
         </div>
