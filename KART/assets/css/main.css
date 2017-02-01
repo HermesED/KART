@@ -349,6 +349,23 @@ ul.sub-menu {
   color: #fff;
 }
 
+#header .container ul > li > p > a{
+  color: #0099AF;
+  font-size: 15px;
+  margin-left: 5px;
+}
+#header .container ul > li > p > a:hover{
+  color: #00AEFF;
+  font-size: 15px;
+}
+#header .container  ul > li > p > a > img{
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #51D2B7;
+  text-align: right;
+}
+
 .fa-angle-down{
   padding-left: 5px; 
 }
@@ -603,6 +620,7 @@ ul.sub-menu {
   right: 470px;
   bottom: 75px;
 }
+
 
 .animate-in .slider-birds1 {
   -webkit-animation: fadeInLeft 500ms ease-in-out 1200ms both;
@@ -3108,7 +3126,7 @@ span.stButton_gradient,
   #header li p{
     font-family: 'Open Sans', sans-serif;
     color: #0099ae;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
     margin-top: 3px;
   }
@@ -3262,6 +3280,9 @@ font-size: 20px;
   font-weight: bold;
   margin-left: 10px;
 }
+#blog-details .container .single-blog .post-thumb img{
+  max-width: 100%
+}
 #footer .container p,h1,h2,h3,h4,h5,h6,blockquote{
   font-weight: bold;
 }
@@ -3295,4 +3316,14 @@ font-size: 20px;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+}
+#edit-profile .container .common-form img{
+  width: 200px;
+  height: 200px;
+  border: 2px solid #00AA9E;
+  border-radius: 100px;
+  background-size: 141px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-left: 40px;
 }
