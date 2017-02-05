@@ -58,7 +58,7 @@
                     <div class="contact-form bottom">
                         <div class="fb-page"
                           data-href="https://www.facebook.com/KharismaArt-1727661744229335/" 
-                          data-width="340"
+                          data-width="290"
                           data-hide-cover="false"
                           data-show-facepile="true">
                         </div><hr>
