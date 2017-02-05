@@ -69,7 +69,6 @@ class Kegiatan extends CI_Controller{
 		$this->load->view('templates/Nav', $data);
         $this->daftar_model->proteksi();
 		$this->load->view('kegiatan/kegiatanentry', $data);
-			
 	}
 
 	function submit(){
@@ -84,9 +83,11 @@ class Kegiatan extends CI_Controller{
     }
 
     public function update(){
+        $this->daftar_model->proteksi();
         $file = $_SESSION['idkeg'].".jpg";
         move_uploaded_file($_FILES['foto']['tmp_name'], './assets/images/kegiatan/'.$file);
         redirect( base_url().'kegiatan');
     }
+
 
 }	//End of Class
