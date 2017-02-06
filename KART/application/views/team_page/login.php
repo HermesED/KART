@@ -20,14 +20,15 @@
             case 1:
 	            echo "<div class='alert alert-danger' role='alert'>
 	            <span class='fa fa-exclamation-triangle fa-2x' aria-hidden='true'></span>
-	             Sign-in Gagal:
+	           Login Gagal:<hr>
 	            Username tidak dikenali atau salah tulis
 	            </div>";
             break;
             case 2:
 	            echo "<div class='alert alert-danger' role='alert'>
 	            <span class='fa fa-exclamation-triangle fa-2x' aria-hidden='true'></span>
-	             Sign-in Gagal: Password tidak sesuai
+	           Login Gagal:<hr>
+	            Password tidak sesuai
 	            </div>";
             break;
         }
