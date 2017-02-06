@@ -3,9 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'main/home';
 
+/** PAGES **/
 $route['home'] = 'main/home';
 $route['maintenance'] = 'main/soon';
+
 $route['about'] = 'main/aboutus';
+$route['about/upload'] = 'gallery/leader_img';
+
 $route['contact'] = 'main/contactus';
 $route['service'] = 'main/service';
 $route['pricing'] = 'main/price';
@@ -17,7 +21,8 @@ $route['usr/login/(:any)'] = 'usr/log/$1';
 $route['usr/logout'] = 'usr/logout';
 $route['usr/dologin'] = 'usr/login';
 $route['usr/signup'] = 'usr/sp';
-$route['usr/register'] = 'usr/register';
+$route['usr/signup/(:any)'] = 'usr/sp/$1';
+$route['usr/register'] = 'usr/ceksignup';
 
 /** ADMINISTRASI **/
 $route['pendaftaran'] = 'administrasi/reg';
@@ -25,10 +30,15 @@ $route['daftar']  = 'administrasi/dftr';
 $route['pembatalan'] = 'administrasi/btl';
 $route['batal'] = 'administrasi/batal';
 
+/** GALLERY **/
 $route['gallery'] = 'gallery/g1';
 $route['gallery2'] = 'gallery/g2';
 $route['gallerydetail'] = 'gallery/g_detail';
+$route['gallery/upload'] = 'gallery/upd_gallery';
+$route['gallery/imgtitle'] = 'gallery/img_title';
+$route['gallery/(:any)'] = 'gallery/g1/$1';
 
+/** USERS **/
 $route['members'] = 'member/m1';
 $route['users']	= 'member/userpage';
 
