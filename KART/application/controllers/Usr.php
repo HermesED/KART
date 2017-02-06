@@ -30,17 +30,28 @@ class Usr extends CI_Controller{
 
 	}
 	
-	public function sp(){
+	public function sp($status = 0){
 		$data['title'] = "SIGN UP | K-ART";
+		$data['status'] = $status;
 		$this->load->view('templates/Header');
 		$this->load->view('team_page/signup', $data);
 	}
 
-	public function register(){
-		$this->daftar_model->dftrlogin();
-		$this->session->set_flashdata('msg','AKUN ANDA TELAH TERDAFTAR');
-        redirect(base_url('usr/signup'));
-    }
+	// Proses cek nim dan username sign-up
+	public function ceksignup(){
+		$this->daftar_model->proteksi2;
+		if( $this->daftar_model->nimada( $this->input->post('nim') )) {
+				// NIM Ada
+				redirect( base_url().'usr/signup/1');}
+		else if ( $this->daftar_model->userada( $this->input->post('username') )){
+				// Username Ada
+				redirect( base_url().'usr/signup/2');}
+		else{
+				$this->daftar_model->dftrlogin();
+				$this->session->set_flashdata('msg','THANK YOU! ANDA TELAH TERDAFTAR');
+		        redirect(base_url('usr/signup'));
+		}
+	}
 
 	public function logout(){
 		session_destroy();
