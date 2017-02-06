@@ -9,6 +9,14 @@
 </head><!--/head-->
 
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <?php
     $_SESSION['idkeg'] = $news['id_keg'];
 ?>
@@ -82,74 +90,23 @@
                                         </ul>
                                     </div>
                                     <div class="blog-share">
-                                        <span class='st_facebook_hcount'></span>
+                                        <div class="fb-share-button" 
+                                            data-href="https://www.facebook.com/KharismaArt-1727661744229335/" 
+                                            data-layout="button_count">
+                                        </div>
                                         <span class='st_twitter_hcount'></span>
                                         <span class='st_linkedin_hcount'></span>
                                         <span class='st_pinterest_hcount'></span>
                                         <span class='st_email_hcount'></span>
                                     </div>
-                                    <div class="author-profile padding">
-                                        <div class="row">
-                                            <div class="col-sm-2">
-                                                <img src="<?= base_url();?>assets/images/blogdetails/1.png" alt="">
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <h3>Rodrix Hasel</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                                <span>Website:<a href="www.jooomshaper.com"> www.jooomshaper.com</a></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="response-area">
+                                    <div class="response-area"><br>
                                     <h2 class="bold">Comments</h2>
                                     <ul class="media-list">
                                         <li class="media">
                                             <div class="post-comment">
-                                                <a class="pull-left" href="#">
-                                                    <img class="media-object" src="<?= base_url();?>assets/images/blogdetails/2.png" alt="">
-                                                </a>
-                                                <div class="media-body">
-                                                    <span><i class="fa fa-user"></i>Posted by <a href="#">Endure</a></span>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-                                                    <ul class="nav navbar-nav post-nav">
-                                                        <li><a href="#"><i class="fa fa-clock-o"></i>February 11,2014</a></li>
-                                                        <li><a href="#"><i class="fa fa-reply"></i>Reply</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="parrent">
-                                                <ul class="media-list">
-                                                    <li class="post-comment reply">
-                                                        <a class="pull-left" href="#">
-                                                            <img class="media-object" src="<?= base_url();?>assets/images/blogdetails/3.png" alt="">
-                                                        </a>
-                                                        <div class="media-body">
-                                                            <span><i class="fa fa-user"></i>Posted by <a href="#">Endure</a></span>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
-                                                            <ul class="nav navbar-nav post-nav">
-                                                                <li><a href="#"><i class="fa fa-clock-o"></i>February 11,2014</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </li>
-                                                </ul>
+                                            <div class="fb-comments" data-width="650" data-href="https://www.facebook.com/KharismaArt-1727661744229335/" data-numposts="5">
                                             </div>
                                         </li>
-                                        <li class="media">
-                                            <div class="post-comment">
-                                                <a class="pull-left" href="#">
-                                                    <img class="media-object" src="<?= base_url();?>assets/images/blogdetails/4.png" alt="">
-                                                </a>
-                                                <div class="media-body">
-                                                    <span><i class="fa fa-user"></i>Posted by <a href="#">Endure</a></span>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-                                                    <ul class="nav navbar-nav post-nav">
-                                                        <li><a href="#"><i class="fa fa-clock-o"></i>February 11,2014</a></li>
-                                                        <li><a href="#"><i class="fa fa-reply"></i>Reply</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
                                     </ul>                   
                                 </div><!--/Response-area-->
                                 </div>

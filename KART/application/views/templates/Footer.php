@@ -56,6 +56,12 @@
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <div class="contact-form bottom">
+                        <div class="fb-page"
+                          data-href="https://www.facebook.com/KharismaArt-1727661744229335/" 
+                          data-width="290"
+                          data-hide-cover="false"
+                          data-show-facepile="true">
+                        </div><hr>
                         <h2>Send a message</h2>
                         <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
                             <div class="form-group">
@@ -83,6 +89,15 @@
         </div>
     </footer>
     <!--/#footer-->
-    
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 </body>
 </html>
