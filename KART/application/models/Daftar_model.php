@@ -53,9 +53,10 @@ class Daftar_model extends CI_Model {
         $this->db->insert( 'anggota_ukm', $data );
     }
 
-    public function nimsudahterdaftar( $nim ){
-        $query = $this->db->get_where( 'anggota_ukm', array( 'nim' => $nim) );
+    public function nimada( $nim ){
+        $query = $this->db->get_where( 'dblogin', array( 'nim' => $nim) );
         if(( $query->row_array() )) {
+            $_SESSION['nim'] = $query->row_array()['nim'];
             return true;
         }
         return false;
