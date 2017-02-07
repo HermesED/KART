@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="timeline-blog overflow padding-top">
                     <div class="timeline-date text-center">
-                        <a href="#" class="btn btn-common uppercase">November 2013</a>
+                        <a href="#" class="btn btn-common uppercase"><?= $berita['tanggal'] ?></a>
                     </div>
                     <div class="timeline-divider overflow padding-bottom">
                         <div class="col-sm-6 padding-right arrow-right wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -67,7 +67,7 @@
                                     <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber [...]</p>
                                     <a href="#" class="read-more">View More</a>
                                     <div class="post-bottom overflow">
-                                        <span class="post-date pull-left">February 11, 2014</span>
+                                        <span class="post-date pull-left"><?= $berita['tanggal'] ?></span>
                                         <span class="comments-number pull-right"><a href="#">3 comments</a></span>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="timeline-blog overflow">
                     <div class="timeline-date text-center">
-                        <a href="" class="btn btn-common uppercase">Setember 2013</a>
+                        <a href="" class="btn btn-common uppercase"><?= $berita['tanggal'] ?></a>
                     </div>
                     <div class="timeline-divider overflow padding-bottom">
                         <div class="col-sm-6 padding-right arrow-right wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -95,7 +95,7 @@
                                     <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber [...]</p>
                                     <a href="#" class="read-more">View More</a>
                                     <div class="post-bottom overflow">
-                                        <span class="post-date pull-left">February 11, 2014</span>
+                                        <span class="post-date pull-left"><?= $berita['tanggal'] ?></span>
                                         <span class="comments-number pull-right"><a href="#">3 comments</a></span>
                                     </div>
                                 </div>

@@ -32,6 +32,27 @@
         </div>
         <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
     </section>
+    <?php
+    $img = count(glob("./assets/images/*.*"));
+    $about = count(glob("./assets/images/aboutus/*.*"));
+    $blog1 = count(glob("./assets/images/blog/*.*"));
+    $mason = count(glob("./assets/images/blog/masonary/*.*"));
+    $tl = count(glob("./assets/images/blog/timeline/*.*"));
+    $blog2 = count(glob("./assets/images/blogdetails/*.*"));
+    $gallery = count(glob("./assets/images/gallery/*.*"));
+    $home = count(glob("./assets/images/home/*.*"));
+    $home2 = count(glob("./assets/images/home/slider/*.*"));
+    $ico = count(glob("./assets/images/ico/*.*"));
+    $lb = count(glob("./assets/images/lightbox/*.*"));
+    $keg = count(glob("./assets/images/kegiatan/*.*"));
+    $port1 = count(glob("./assets/images/portfolio/*.*"));
+    $port2 = count(glob("./assets/images/portfolio-details/*.*"));
+    $leader = count(glob("./assets/images/leaders/*.*"));
+    $srv = count(glob("./assets/images/services/*.*"));
+    $usr = count(glob("./assets/images/users/*.*"));
+    $count = $img+$about+$blog1+$mason+$tl+$blog2+$gallery+$home+$home2+$ico+$lb+$keg+$port1+$port2+$leader+$srv+$usr;
+    ?>
+
     <!--/#home-slider-->
     <section id="action">
         <div class="vertical-center">
@@ -47,12 +68,12 @@
                             <h3>Users</h3> 
                         </div>
                         <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <h1 class="timer bold" data-to="432" data-speed="3000" data-from="0"></h1> 
-                            <h3>Cups of Coffee</h3>
+                            <h1 class="timer bold" data-to="<?= $count;?>" data-speed="3000" data-from="0"></h1> 
+                            <h3>Total Images</h3>
                         </div>
                         <div class="col-sm-3 text-center wow bounceIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <h1 class="timer bold" data-to="145" data-speed="3000" data-from="0"></h1> 
-                            <h3>Total Project</h3>
+                            <h1 class="timer bold" data-to="<?= $gallery;?>" data-speed="3000" data-from="0"></h1> 
+                            <h3>Weekly Drawing</h3>
                         </div>
                     </div>
                 </div>
@@ -60,7 +81,7 @@
         </div>
    </section>
     <!--/#action-->
-
+    
     <section id="services">
         <div class="container">
             <div class="row">

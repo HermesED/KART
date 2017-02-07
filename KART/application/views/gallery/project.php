@@ -1,7 +1,7 @@
 <head>
     <title><?= $title;?></title>
-    <link href="assets/css/lightbox.css" rel="stylesheet">  
-    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="<?= base_url()?>assets/css/lightbox.css" rel="stylesheet">  
+    <link href="<?= base_url()?>assets/css/animate.min.css" rel="stylesheet">
 </head><!--/head-->
 
 <body>
@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="assets/images/portfolio-details/1.jpg" class="img-responsive" alt="">
+                    <img src="<?= base_url()?>assets/images/portfolio-details/1.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="col-sm-6">
                     <div class="project-name overflow">
@@ -60,11 +60,11 @@
                     <div class="portfolio-wrapper">
                         <div class="portfolio-single">
                             <div class="portfolio-thumb">
-                                <img src="assets/images/portfolio/1.jpg" class="img-responsive" alt="">
+                                <img src="<?= base_url()?>assets/images/portfolio/1.jpg" class="img-responsive" alt="">
                             </div>
                             <div class="portfolio-view">
                                 <ul class="nav nav-pills">
-                                    <li><a href="assets/images/portfolio/1.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="<?= base_url()?>assets/images/portfolio/1.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -77,11 +77,11 @@
                     <div class="portfolio-wrapper">
                         <div class="portfolio-single">
                             <div class="portfolio-thumb">
-                                <img src="assets/images/portfolio/2.jpg" class="img-responsive" alt="">
+                                <img src="<?= base_url()?>assets/images/portfolio/2.jpg" class="img-responsive" alt="">
                             </div>
                             <div class="portfolio-view">
                                 <ul class="nav nav-pills">
-                                    <li><a href="assets/images/portfolio/2.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="<?= base_url()?>assets/images/portfolio/2.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -94,11 +94,11 @@
                     <div class="portfolio-wrapper">
                         <div class="portfolio-single">
                             <div class="portfolio-thumb">
-                                <img src="assets/images/portfolio/3.jpg" class="img-responsive" alt="">
+                                <img src="<?= base_url()?>assets/images/portfolio/3.jpg" class="img-responsive" alt="">
                             </div>
                             <div class="portfolio-view">
                                 <ul class="nav nav-pills">
-                                    <li><a href="assets/images/portfolio/3.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="<?= base_url()?>assets/images/portfolio/3.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -111,11 +111,11 @@
                     <div class="portfolio-wrapper">
                         <div class="portfolio-single">
                             <div class="portfolio-thumb">
-                                <img src="assets/images/portfolio/4.jpg" class="img-responsive" alt="">
+                                <img src="<?= base_url()?>assets/images/portfolio/4.jpg" class="img-responsive" alt="">
                             </div>
                             <div class="portfolio-view">
                                 <ul class="nav nav-pills">
-                                    <li><a href="assets/images/portfolio/4.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="<?= base_url()?>assets/images/portfolio/4.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
                                 </ul>
                             </div>
                         </div>

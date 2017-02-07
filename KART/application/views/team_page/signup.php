@@ -15,6 +15,24 @@
 				</label>
             </div>
 		<div class="container">
+		<?php
+        switch( $status ){
+            case 1:
+	            echo "<div class='alert alert-danger' role='alert'>
+	            <span class='fa fa-exclamation-triangle fa-2x' aria-hidden='true'></span>
+	            Sign-Up Gagal:<br><hr>
+	            NIM Yang Anda Masukkan Sudah Pernah Terdaftar.
+	            </div>";
+            break;
+            case 2:
+	            echo "<div class='alert alert-danger' role='alert'>
+	            <span class='fa fa-exclamation-triangle fa-2x' aria-hidden='true'></span>
+	            Sign-Up Gagal:<br><hr>
+	            Username Exist. Try Another One.
+	            </div>";
+            break;
+        }
+        ?>
         <?php if($this->session->flashdata('msg')): ?>
         	<div class="alert alert-success" role="alert" align="center">
                <?=$this->session->flashdata('msg')?>

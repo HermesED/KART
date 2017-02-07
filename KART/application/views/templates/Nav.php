@@ -86,7 +86,7 @@
                             <ul role="menu" class="sub-menu">
                                 <li <?php if($page == "Gal1") echo "class='active'";?>><a href="<?= base_url();?>gallery">Gallery</a></li>
                                 <li <?php if($page == "Gal2") echo "class='active'";?>><a href="<?= base_url();?>gallery2">Gallery V2</a></li>
-                                <li <?php if($page == "Gade") echo "class='active'";?>><a href="<?= base_url();?>gallerydetail">Gallery Detail</a></li>
+                                <li <?php if($page == "PJT") echo "class='active'";?>><a href="<?= base_url();?>project">Projects</a></li>
                             </ul>
                         </li>
                     <?php if($_SESSION['admin']!=1):?>
