@@ -27,14 +27,14 @@ class Gallery extends CI_Controller{
 		$this->load->view('templates/Footer');		
 	}
 
-	function g_detail(){
-		$data['title'] = "GALLERY | K-ART";
-		$data['page']  = "Gade";
-		$data['judul'] = "Gallery Detail";
-		$data['quotes'] = "Photos & Images";
+	function project(){
+		$data['title'] = "PROJECT | K-ART";
+		$data['page']  = "PJT";
+		$data['judul'] = "Project On Going";
+		$data['quotes'] = "Our Projects";
 		$this->load->view('templates/Header');
 		$this->load->view('templates/Nav', $data);
-		$this->load->view('gallery/gallery_detail', $data);
+		$this->load->view('gallery/project', $data);
 		$this->load->view('templates/Footer');		
 	}
 }	//End of Class
