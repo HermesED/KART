@@ -3115,6 +3115,36 @@ span.stButton_gradient,
       -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px rgb(248,66,66);
         box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px rgb(248,66,66);
     }
+    .common-form input[type="text"]:valid,
+    .common-form input[type="email"]:valid,
+    .common-form input[type="number"]:valid,
+    .common-form input[type="search"]:valid,
+    .common-form input[type="password"]:valid,
+    .common-form textarea:valid,
+    .common-form select:valid { 
+      border-color: #0f9;
+    background-color: #0f9;
+    color: #000;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #0f9;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #0f9;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #0f9;
+    color: rgb(0,0,0);
+    }
+
+    .common-form input[type="text"]:disabled,
+    .common-form input[type="email"]:disabled,
+    .common-form input[type="number"]:disabled,
+    .common-form input[type="password"]:disabled,
+    .common-form textarea:disabled,
+    .common-form select:disabled { 
+    border-color: #333;
+    background-color: #333;
+    color: #fff;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #333;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #333;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #333;
+    color: rgb(0,0,0);
+    }
 
  .common-form input::-webkit-input-placeholder,
  .common-form textarea::-webkit-input-placeholder{
