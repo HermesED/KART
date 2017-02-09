@@ -61,13 +61,6 @@ class Daftar_model extends CI_Model {
         }
         return false;
     }
-    public function emailsudahterdaftar( $email ){
-        $query = $this->db->get_where( 'anggota_ukm', array( 'email' => $email) );
-        if(( $query->row_array() )) {
-            return true;
-        }
-        return false;
-    }
 
     public function userada( $username ){
         $query = $this->db->get_where( 'dblogin', array( 'username' => $username) );
@@ -86,6 +79,36 @@ class Daftar_model extends CI_Model {
             return true;
         }
         return FALSE;
+    }
+
+    //VALIDASI FORM PENDAFTARAN
+    public function nimexist( $nim ){
+        $query = $this->db->get_where( 'anggota_ukm', array( 'nim' => $nim) );
+        if(( $query->row_array() )) {
+            return true;
+        }
+        return false;
+    }
+    public function namaexist( $nama ){
+        $query = $this->db->get_where( 'anggota_ukm', array( 'namalengkap' => $nama) );
+        if(( $query->row_array() )) {
+            return true;
+        }
+        return false;
+    }
+    public function emailexist( $email ){
+        $query = $this->db->get_where( 'pendaftaran', array( 'email' => $email) );
+        if(( $query->row_array() )) {
+            return true;
+        }
+        return false;
+    }
+    public function hpexist( $hp ){
+        $query = $this->db->get_where( 'anggota_ukm', array( 'nomor_hp' => $hp) );
+        if(( $query->row_array() )) {
+            return true;
+        }
+        return false;
     }
     
     function proteksi(){
