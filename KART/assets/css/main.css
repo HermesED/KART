@@ -3115,6 +3115,35 @@ span.stButton_gradient,
       -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px rgb(248,66,66);
         box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px rgb(248,66,66);
     }
+    .common-form input[type="text"]:valid,
+    .common-form input[type="email"]:valid,
+    .common-form input[type="number"]:valid,
+    .common-form input[type="search"]:valid,
+    .common-form input[type="password"]:valid,
+    .common-form textarea:valid,
+    .common-form select:valid { 
+      border-color: #0f9;
+    background-color: #0f9;
+    color: #000;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #0f9;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #0f9;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #0f9;
+    color: rgb(0,0,0);
+    }
+
+    .common-form input[type="text"]:disabled,
+    .common-form input[type="email"]:disabled,
+    .common-form input[type="number"]:disabled,
+    .common-form input[type="password"]:disabled,
+    .common-form textarea:disabled,
+    .common-form select:disabled { 
+    border-color: #333;
+    background-color: #222;
+    color: #fff;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #333;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #333;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #333;
+    }
 
  .common-form input::-webkit-input-placeholder,
  .common-form textarea::-webkit-input-placeholder{
@@ -3134,6 +3163,22 @@ span.stButton_gradient,
 .common-form input:-ms-input-placeholder
 .common-form textarea:-ms-input-placeholder {  
    color: #333;  
+}
+.common-form input:disabled::-webkit-input-placeholder,
+.common-form textarea:disabled::-webkit-input-placeholder { /* WebKit browsers */
+    color: #AAA;
+}
+.common-form input:disabled:-moz-placeholder,
+.common-form textarea:disabled:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #AAA;
+}
+.common-form input:disabled::-moz-placeholder,
+.common-form textarea:disabled::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #AAA;
+}
+.common-form input:disabled:-ms-input-placeholder,
+.common-form textarea:disabled:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #AAA;
 }
 
 #header li > .btn-common{
