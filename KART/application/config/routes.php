@@ -33,6 +33,9 @@ $route['batal'] = 'administrasi/batal';
 /** GALLERY **/
 $route['gallery'] = 'gallery/g1';
 $route['gallery2'] = 'gallery/g2';
+$route['project'] = 'gallery/project';
+$route['gallery/upload'] = 'gallery/upd_gallery';
+$route['gallery/delete'] = 'gallery/delete_img';
 $route['gallery/(:any)'] = 'gallery/g1/$1';
 
 /** USERS **/
