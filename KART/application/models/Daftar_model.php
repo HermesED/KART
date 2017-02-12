@@ -110,6 +110,13 @@ class Daftar_model extends CI_Model {
         }
         return false;
     }
+    public function nimbtl( $nim ){
+        $query = $this->db->get_where( 'pembatalan', array( 'nim' => $nim) );
+        if(( $query->row_array() )) {
+            return true;
+        }
+        return false;
+    }
     
     function proteksi(){
         if($_SESSION['admin']!=1){
