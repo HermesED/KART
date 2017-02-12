@@ -32,4 +32,12 @@ class Ajax extends CI_Controller {
         }
     }
 
+    public function ceknimbtl(){
+        if( $this->daftar_model->nimbtl( $this->input->post('nim') )) {
+            echo "1";
+        } else {
+            echo "0";
+        }
+    }
+
 }
