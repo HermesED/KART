@@ -1,13 +1,6 @@
 /**
- * Lightbox v2.7.1
- * by Lokesh Dhakar - http://lokeshdhakar.com/projects/lightbox2/
- *
- * @license http://creativecommons.org/licenses/by/2.5/
- * - Free for use in both personal and commercial projects
- * - Attribution requires leaving author name, author link, and the license info intact
+ *AJAX JAVASCRIPT
  */
-
-
 //# sourceMappingURL=lightbox.min.map
 
 $("#dftrnim").change( function(){
@@ -75,6 +68,29 @@ $("#dftremail").change( function(){
                 $("#dftrthn").removeAttr("disabled");
                 $("#software").removeAttr("disabled");
                 $("#dftrhp").removeAttr("disabled");
+            }
+        }
+    });
+} );
+$("#nimbtl").change( function(){
+    $.ajax({
+        url: "ajax/ceknimbtl",
+        data: { "nim" : $(this).val() } ,
+        method: "POST",
+        success: function(result){
+            if( result == '1') {
+                $("#nimbtl").attr("placeholder", "NIM Ini Sudah Ada Dalam List!").val("").focus();
+                $("input[type='submit']").attr("disabled", true);
+                $("#namabtl").attr("disabled", true);
+                $("#angkatanbtl").attr("disabled", true);
+                $("#alasan").attr("disabled", true);
+                $("#pe_saran").attr("disabled", true);
+            } else {
+                $("input[type='submit']").removeAttr("disabled");
+                $("#namabtl").removeAttr("disabled").focus();
+                $("#angkatanbtl").removeAttr("disabled");
+                $("#alasan").removeAttr("disabled");
+                $("#pe_saran").removeAttr("disabled");
             }
         }
     });
