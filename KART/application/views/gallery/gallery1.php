@@ -63,13 +63,13 @@
                 <div class='portfolio-wrapper'>
                     <div class='portfolio-single'>
                         <div class='portfolio-thumb'>
-                        <img src='.$image.' class='img-responsive' alt=''>
+                        <img src='".base_url()."/".$image."' class='img-responsive' alt=''>
                         </div>
                         <form id='imgtitle' class='kart' action='" . base_url() . "gallery/delete' method='post'>
                         <div class='portfolio-view'>
                             <ul class='nav nav-pills'>
                                 <li><a href='#'><i class='fa fa-link'></i></a></li>
-                                <li><a href='.$image.' data-lightbox='example-set'><i class='fa fa-eye'></i></a></li>
+                                <li><a href='".base_url()."/".$image."' data-lightbox='example-set'><i class='fa fa-eye'></i></a></li>
                                 <li><a href='#'><i class='fa fa-heart'></i></a></li>
                             </ul>
                         </div>
@@ -99,12 +99,12 @@
                 <div class='portfolio-wrapper'>
                     <div class='portfolio-single'>
                         <div class='portfolio-thumb'>
-                        <img src='.$image.' class='img-responsive' alt=''>
+                        <img src='".base_url()."/".$image."' class='img-responsive' alt=''>
                         </div>
                         <div class='portfolio-view'>
                             <ul class='nav nav-pills'>
                                 <li><a href='gallerydetail'><i class='fa fa-link'></i></a></li>
-                                <li><a href='.$image.' data-lightbox='example-set'><i class='fa fa-eye'></i></a></li>
+                                <li><a href='".base_url()."/".$image."' data-lightbox='example-set'><i class='fa fa-eye'></i></a></li>
                                 <li><a href='#'><i class='fa fa-heart'></i></a></li>
                             </ul>
                         </div>
@@ -127,12 +127,12 @@
                 <div class='portfolio-wrapper'>
                     <div class='portfolio-single'>
                         <div class='portfolio-thumb'>
-                        <img src='.$image.' class='img-responsive' alt=''>
+                        <img src='".base_url()."/".$image."' class='img-responsive' alt=''>
                         </div>
                         <div class='portfolio-view'>
                             <ul class='nav nav-pills'>
                                 <li><a href='gallerydetail'><i class='fa fa-link'></i></a></li>
-                                <li><a href='.$image.' data-lightbox='example-set'><i class='fa fa-eye'></i></a></li>
+                                <li><a href='".base_url()."/".$image."' data-lightbox='example-set'><i class='fa fa-eye'></i></a></li>
                                 <li><a href='#'><i class='fa fa-heart'></i></a></li>
                             </ul>
                         </div>
