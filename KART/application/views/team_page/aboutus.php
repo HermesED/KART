@@ -169,7 +169,7 @@
                                 <div class='team-single-wrapper'>
                                     <div class='team-single'>
                                         <div class='person-thumb'>
-                                            <img src='.$image.' class='img-responsive' alt=''>
+                                            <img src='".base_url()."/".$image."' class='img-responsive' alt=''>
                                         </div>
                                         <div class='social-profile'>
                                             <ul class='nav nav-pills'>
