@@ -1,3 +1,13 @@
+/**
+ * Lightbox v2.7.1
+ * by Lokesh Dhakar - http://lokeshdhakar.com/projects/lightbox2/
+ *
+ * @license http://creativecommons.org/licenses/by/2.5/
+ * - Free for use in both personal and commercial projects
+ * - Attribution requires leaving author name, author link, and the license info intact
+ */
+//# sourceMappingURL=lightbox.min.map
+
 $("#dftrnim").change( function(){
     var noprodi=['510','520','310','320']
     var d = new Date();
@@ -142,47 +152,7 @@ $("#dftrhp").change( function(){
 
 //    $("#dftrthn").val(tahun);
 //} );
-$("#mbnim").change( function(){
-    var noprodi=['510','520','310','320']
-    var d = new Date();
-    var tahun = d.getFullYear().toString();
 
-    var prodi = {
-        '510': "S1 - Sistem Informasi",
-        '520': "S1 - Teknik Informatika",
-        '310': "D3 - Sistem Informasi",
-        '320': "D3 - Teknik Informatika"
-    }
-    
-    var sel      = prodi[$(this).val().substr(0,3)];
-    var angkatan = $("#mbnim").val().substr(3,2);
-
-    if(sel) {
-        $('#mbjurusan option[value="' + sel + '"]').attr("selected", "selected");
-        $("#mbangkatan").val("20"+angkatan);
-    }
-    else{
-        ////
-    }
-
-    $.ajax({
-        url: "ajax/ceknim",
-        data: { "nim" : $(this).val() } ,
-        method: "POST",
-        success: function(result){
-            if( result == '1') {
-                $("#mbnim").attr("placeholder", "NIM Ini Sudah Ada!").val("").focus();
-                $("input[type='submit']").attr("disabled", true);
-                $("#mbnama").attr("disabled", true);
-                $("#mbangkatan").attr("disabled", true);
-            } else {
-                $("input[type='submit']").removeAttr("disabled");
-                $("#mbnama").removeAttr("disabled");
-                $("#mbangkatan").removeAttr("disabled");
-            }
-        }
-    });
-} );
 $("#likenews").click( function(){
     $.ajax({
         url: "kegiatan/likenews",
@@ -199,4 +169,3 @@ $("#likenews").click( function(){
   //}
   //});
 //});
-////////

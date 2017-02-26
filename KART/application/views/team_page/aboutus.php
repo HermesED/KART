@@ -157,69 +157,44 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="team-single-wrapper">
-                                    <div class="team-single">
-                                        <div class="person-thumb">
-                                            <img src="<?= base_url();?>assets/images/aboutus/1.jpg" class="img-responsive" alt="">
+                        <?php
+                        //FOLDER GALLERY-PART
+                        $dirname = "./assets/images/leaders/";
+                        $images = glob($dirname."*.jpg");
+
+                        array_multisort(array_map('filemtime', $images), SORT_NUMERIC, SORT_DESC, $images);
+
+                        foreach($images as $image) {
+                        echo "<div class='col-sm-3 col-xs-6'>
+                                <div class='team-single-wrapper'>
+                                    <div class='team-single'>
+                                        <div class='person-thumb'>
+                                            <img src='".base_url()."/".$image."' class='img-responsive' alt=''>
                                         </div>
-                                        <div class="social-profile">
-                                            <ul class="nav nav-pills">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <div class='social-profile'>
+                                            <ul class='nav nav-pills'>
+                                                <li><a href='#'><i class='fa fa-facebook'></i></a></li>
+                                                <li><a href='#'><i class='fa fa-twitter'></i></a></li>
+                                                <li><a href='#'><i class='fa fa-google-plus'></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="person-info">
+                                    <div class='person-info'>
+                                        <form id='imgtitle' class='kart' action='" . base_url() . "gallery/delete' method='post'>
+                                            <input type = 'hidden' name='delete_file' value='$image' />";?>
+                                            <?php if($_SESSION['admin']==1):?>  
+                                                <button type = 'submit' class='btn btn-danger'><i class='delete fa fa-trash fa-3x'></i></button>
+                                            <?php endif; ?>
+                                    <?="</form>
                                         <h2>John Doe</h2>
                                         <p>CEO &amp; Developer</p>
-                                        <p>(Periode)</p>
+                                        <p>(2014)</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="team-single-wrapper">
-                                    <div class="team-single">
-                                        <div class="person-thumb">
-                                            <img src="<?= base_url();?>assets/images/aboutus/2.jpg" class="img-responsive" alt="">
-                                        </div>
-                                        <div class="social-profile">
-                                            <ul class="nav nav-pills">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="person-info">
-                                        <h2>John Doe</h2>
-                                        <p>CEO &amp; Developer</p>
-                                        <p>(Periode)</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="team-single-wrapper">
-                                    <div class="team-single">
-                                        <div class="person-thumb">
-                                            <img src="<?= base_url();?>assets/images/aboutus/3.jpg" class="img-responsive" alt="">
-                                        </div>
-                                        <div class="social-profile">
-                                            <ul class="nav nav-pills">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="person-info">
-                                        <h2>John Doe</h2>
-                                        <p>CEO &amp; Developer</p>
-                                        <p>(Periode)</p>
-                                    </div>
-                                </div>
-                            </div>
+                            </div>";
+                        }
+                        ?>
+                            
                             <div class="col-sm-3 col-xs-6">
                                 <div class="team-single-wrapper">
                                     <div class="team-single">
@@ -338,3 +313,43 @@
         </div>
     </section>
     <!--/#team-->
+     <?php if($_SESSION['admin']==1):?>
+        <form id="uploadform" class="kart" action="<?= base_url();?>about/upload" method="post" enctype="multipart/form-data">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="common-form bottom">
+                            <h2>Upload Images of Leaders</h2>
+                            <div class="form-group">
+                                <i class="upload fa fa-camera"></i><span> No File Selected</span>
+                                <input id="input-file" type="file" name="foto">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-common" value="Update"><i class="fa fa-upload fa-2x"> Upload</i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-8">
+                    <div id="info-gallery">
+                        <h1><span class="fa fa-exclamation-triangle fa-1x" aria-hidden="true"> Attention Admin!</span></h1><hr>
+                            <li>Tombol Upload pada bagian kiri ini hanya untuk Upload Foto Leaders.</li>
+                            <li>Klik kamera untuk memilih gambar yang akan di-upload.</li>
+                    </div>
+                </div>
+            </div>
+        </form>
+    <?php endif; ?>
+
+<script>
+    $(document).ready(function(){
+        $('.upload').click(function(){
+        $('input[type=file]').trigger('click');
+    });
+
+    $('input[type=file]').change(function() {
+        var val = $(this).val();
+        $(this).siblings('span').text(val);
+        });
+    });
+
+</script>

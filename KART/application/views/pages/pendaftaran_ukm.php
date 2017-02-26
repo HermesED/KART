@@ -7,46 +7,41 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="common-form bottom">
                         <div class="form-group">
-                            <input id="nimdftr" type="text" name="nim" class="form-control" placeholder="NIM (8 angka)" maxlength="8" pattern="\d{8}" required="required" title="8 Digit Angka NIM, NUMBERS and CHARACTERS not allowed" />
-                            <p id="warning_nim"></p>
+                            <input id="dftrnim" type="text" name="nim" class="form-control" placeholder="NIM (8 angka)" maxlength="8" pattern="\d{8}" required="required" title="8 Digit Angka NIM, NUMBERS and CHARACTERS not allowed" />
                         </div>
                         <div class="form-group">
-                            <input id="nama" type="text" name="nama" class="form-control" maxlength="50" placeholder="Nama Lengkap (5 - 40 karakter)" pattern="^[a-zA-Z\s]{5,40}$" required="required" title="Info: MIN 5, MAX 40 Characters, NUMBERS and OPERATORS not allowed" />
+                            <input id="dftrnama" type="text" name="nama" class="form-control" maxlength="50" placeholder="Nama Lengkap (5 - 40 karakter)" pattern="^[a-zA-Z\s]{5,40}$" required="required" title="Info: MIN 5, MAX 40 Characters, NUMBERS and OPERATORS not allowed" />
                         </div>
                         <div class="form-group">
-                            <input id="emaildftr" type="email" name="email" class="form-control" required="required" placeholder="E-mail">
-                            <p id="warning_email"></p>
+                            <input id="dftremail" type="email" name="email" class="form-control" required="required" placeholder="E-mail">
                         </div>
                         <div class="form-group">
-                            <div class="radio">
-                                <input type="radio" value="S1 - Sistem Informasi" name="studi" required="required">S1 - Sistem Informasi
-                            </div>
-                            <div class="radio">
-                                <input type="radio" value="S1 - Teknik Informatika" name="studi" required="required">S1 - Teknik Informatika
-                            </div>
-                            <div class="radio">
-                                <input type="radio" value="D3 - Sistem Informasi" name="studi" required="required">D3 - Sistem Informasi
-                            </div>
+                          <select id="dftrprodi" name="studi">
+                            <option select value="1">--Program Studi--</option>
+                            <option value="S1 - Sistem Informasi">S1 - Sistem Informasi</option>
+                            <option value="S1 - Teknik Informatika">S1 - Teknik Informatika</option>
+                            <option value="D3 - Sistem Informasi">D3 - Sistem Informasi</option>
+                            <option value="D3 - Teknik Informatika">D3 - Teknik Informatika</option>
+                          </select>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="common-form bottom">
                         <div class="form-group">
-                            <input type="text" name="angkatan" class="form-control" required="required" placeholder="Tahun Angkatan" maxlength="4" pattern="\d{4}">
+                            <input id="dftrthn" type="text" name="angkatan" class="form-control" required="required" placeholder="Tahun Angkatan" maxlength="4" pattern="\d{4}">
                         </div>
                         <div class="form-group">
-                            <textarea minlength="5" maxlength="100" name="experience" id="message" required="required" class="form-control" rows="8" placeholder="Software Graphic Design Yang Anda Ketahui?" title="MIN 5 CHARACTERS, MAX 100."></textarea>
+                            <textarea id="software" minlength="5" maxlength="100" name="experience" id="message" required="required" class="form-control" rows="8" placeholder="Software Graphic Design Yang Anda Ketahui?" title="MIN 5 CHARACTERS, MAX 100."></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="nomorhp" class="form-control" required="required" placeholder="Phone Number" maxlength="12" pattern="\d{12}" title="12 Digit Nomor HP" />
+                            <input id="dftrhp" type="text" name="nomorhp" class="form-control" required="required" placeholder="Phone Number" maxlength="12" pattern="\d{12}" title="12 Digit Nomor HP" />
                         </div>                 
                         <div class="form-group">
                             <input type="submit" name="submit" class="btn btn-submit" value="Submit">
                         </div>
                     </div>
                 </div>
-    </form>
                 <div class="col-md-3 col-sm-6">
                     <div class="contact-info bottom">
                         <h2>Help Info</h2><hr>
@@ -61,3 +56,6 @@
                 </div>
             </div>
         </div>
+    </form>
+
+<script src="<?= base_url()?>assets/js/ajax.js"></script>

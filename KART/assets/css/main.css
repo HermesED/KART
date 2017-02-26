@@ -2836,14 +2836,14 @@ span.stButton_gradient,
     transform: translate3d(0,0,0);
 
   /* Set your background with this */
-    background: #fff url("images/404-bg.png") center;
+    background: url("images/404-bg.png") center;
     background-repeat: repeat-x;
-    height: 100%;
+    height: 80%;
     left: 0;
-    opacity: 1;
+    opacity: 1.5;
     position: fixed;
     top: 0;
-    margin-top: 33px;
+    margin-top: 83px;
   }
 
   @-moz-keyframes bg {
@@ -3025,9 +3025,41 @@ span.stButton_gradient,
 #success_message{ display: none;}
 
 
-
 /*FORM*/
 
+ #uploadform .container .form-group input[type="file"]{
+    visibility: hidden;
+ }
+#uploadform .container .form-group i.upload {
+  display: inline-flex;
+  align-items: center;
+}
+ #uploadform .container .form-group i.fa-camera {
+  cursor: pointer;
+  font-size: 35px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+ #uploadform .container .form-group i:hover {
+  opacity: 0.6;
+}
+ #uploadform .container .form-group .btn-common {
+  margin-left: 40px;
+}
+
+ #uploadform .container .form-group span {
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 20px;
+}
+#uploadform .container #info-gallery h1 {
+  font-weight: bold;
+  color: #0099AE;
+}
+#uploadform .container #info-gallery li {
+  font-weight: bold;
+  font-size: 15px;
+}
   .common-form input[type="text"],
   .common-form input[type="email"],
   .common-form input[type="number"],
@@ -3083,6 +3115,35 @@ span.stButton_gradient,
       -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px rgb(248,66,66);
         box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px rgb(248,66,66);
     }
+    .common-form input[type="text"]:valid,
+    .common-form input[type="email"]:valid,
+    .common-form input[type="number"]:valid,
+    .common-form input[type="search"]:valid,
+    .common-form input[type="password"]:valid,
+    .common-form textarea:valid,
+    .common-form select:valid { 
+      border-color: #0f9;
+    background-color: #0f9;
+    color: #000;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #0f9;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #0f9;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #0f9;
+    color: rgb(0,0,0);
+    }
+
+    .common-form input[type="text"]:disabled,
+    .common-form input[type="email"]:disabled,
+    .common-form input[type="number"]:disabled,
+    .common-form input[type="password"]:disabled,
+    .common-form textarea:disabled,
+    .common-form select:disabled { 
+    border-color: #333;
+    background-color: #222;
+    color: #fff;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #333;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #333;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #333;
+    }
 
  .common-form input::-webkit-input-placeholder,
  .common-form textarea::-webkit-input-placeholder{
@@ -3103,7 +3164,27 @@ span.stButton_gradient,
 .common-form textarea:-ms-input-placeholder {  
    color: #333;  
 }
-
+.common-form input:disabled::-webkit-input-placeholder,
+.common-form textarea:disabled::-webkit-input-placeholder { /* WebKit browsers */
+    color: #AAA;
+}
+.common-form input:disabled:-moz-placeholder,
+.common-form textarea:disabled:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #AAA;
+}
+.common-form input:disabled::-moz-placeholder,
+.common-form textarea:disabled::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #AAA;
+}
+.common-form input:disabled:-ms-input-placeholder,
+.common-form textarea:disabled:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #AAA;
+}
+.common-form select{
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+}
 #header li > .btn-common{
     font-size: 10px;
     color: #0099ae;
@@ -3317,6 +3398,10 @@ font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
+#team .container .team-single-wrapper .person-thumb img{
+  height: 285px;
+  width: auto;
+}
 #edit-profile .container .common-form img{
   width: 200px;
   height: 200px;
@@ -3326,4 +3411,7 @@ font-size: 20px;
   background-repeat: no-repeat;
   background-position: 50%;
   margin-left: 40px;
+}
+#portfolio .container .portfolio-single .portfolio-thumb img{
+  height: 269px;
 }

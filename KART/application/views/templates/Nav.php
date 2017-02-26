@@ -94,7 +94,7 @@
                             <ul role="menu" class="sub-menu">
                                 <li <?php if($page == "Dftr") echo "class='active'";?>><a href="<?= base_url();?>pendaftaran">Pendaftaran</a></li>
                                 <li <?php if($page == "Btl") echo "class='active'";?>><a href="<?= base_url();?>pembatalan">Pembatalan</a></li>
-                                <li <?php if($page == "Mbm") echo "class='active'";?>><a href="<?= base_url();?>members">Members</a></li>
+                                <li <?php if($page == "MB1") echo "class='active'";?>><a href="<?= base_url();?>members">Members</a></li>
                             </ul>
                         </li>
                     <?php else : ?>
