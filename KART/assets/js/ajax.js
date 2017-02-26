@@ -135,25 +135,6 @@ $("#nimbtl").change( function(){
         }
     });
 } );
-$("#mbnim").change( function(){
-    $.ajax({
-        url: "ajax/ceknim",
-        data: { "nim" : $(this).val() } ,
-        method: "POST",
-        success: function(result){
-            if( result == '1') {
-                $("#mbnim").attr("placeholder", "NIM Ini Sudah Ada!").val("").focus();
-                $("input[type='submit']").attr("disabled", true);
-                $("#mbnama").attr("disabled", true);
-                $("#mbangkatan").attr("disabled", true);
-            } else {
-                $("input[type='submit']").removeAttr("disabled");
-                $("#mbnama").removeAttr("disabled");
-                $("#mbangkatan").removeAttr("disabled");
-            }
-        }
-    });
-} );
 
 $("#dftrhp").change( function(){
     var nohp=['081','082','085','089','087']
