@@ -3180,7 +3180,11 @@ span.stButton_gradient,
 .common-form textarea:disabled:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: #AAA;
 }
-
+.common-form select{
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+}
 #header li > .btn-common{
     font-size: 10px;
     color: #0099ae;
