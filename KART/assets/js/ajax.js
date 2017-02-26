@@ -1,33 +1,87 @@
 /**
- *AJAX JAVASCRIPT
+ * Lightbox v2.7.1
+ * by Lokesh Dhakar - http://lokeshdhakar.com/projects/lightbox2/
+ *
+ * @license http://creativecommons.org/licenses/by/2.5/
+ * - Free for use in both personal and commercial projects
+ * - Attribution requires leaving author name, author link, and the license info intact
  */
 //# sourceMappingURL=lightbox.min.map
 
 $("#dftrnim").change( function(){
-    $.ajax({
-        url: "ajax/ceknim",
-        data: { "nim" : $(this).val() } ,
-        method: "POST",
-        success: function(result){
-            if( result == '1') {
-                $("#dftrnim").attr("placeholder", "NIM Ini Sudah Terdaftar!").val("").focus();
-                $("input[type='submit']").attr("disabled", true);
-                $("#dftrnama").attr("disabled", true);
-                $("#dftremail").attr("disabled", true);
-                $("#dftrthn").attr("disabled", true);
-                $("#software").attr("disabled", true);
-                $("#dftrhp").attr("disabled", true);
-            } else {
-                $("input[type='submit']").removeAttr("disabled");
-                $("#dftrnama").removeAttr("disabled").focus();
-                $("#dftremail").removeAttr("disabled");
-                $("#dftrthn").removeAttr("disabled");
-                $("#software").removeAttr("disabled");
-                $("#dftrhp").removeAttr("disabled");
+    var noprodi=['510','520','310','320']
+    var d = new Date();
+    var tahun = d.getFullYear().toString();
+
+    var prodi = {
+        '510': "S1 - Sistem Informasi",
+        '520': "S1 - Teknik Informatika",
+        '310': "D3 - Sistem Informasi",
+        '320': "D3 - Teknik Informatika"
+    }
+    
+    var sel = prodi[$(this).val().substr(0,3)];
+
+    if(sel) {
+        $('#dftrprodi option[value="' + sel + '"]').attr("selected", "selected");
+    }
+    else{
+        ////
+    }
+
+    if(sel < tahun.indexOf($(this).val().substr(2,2)) ){
+        $("#dftrthn").attr("disabled", true);
+    }
+
+    if (noprodi.indexOf($(this).val().substr(0,3)) < 0 || parseInt($(this).val().substr(3,2))+2000>tahun){
+        $("#dftrnim").attr("placeholder", "NIM Ini Tidak Valid!").val("").focus();
+        $("input[type='submit']").attr("disabled", true);
+        $("#dftrnama").attr("disabled", true);
+        $("#dftremail").attr("disabled", true);
+        $("#dftrthn").attr("disabled", true);
+        $("#software").attr("disabled", true);
+        $("#dftrhp").attr("disabled", true);
+    }
+    else
+    {
+        $.ajax({
+            url: "ajax/ceknim",
+            data: { "nim" : $(this).val() } ,
+            method: "POST",
+            success: function(result){
+                if( result == '1') {
+                    $("#dftrnim").attr("placeholder", "NIM Ini Sudah Terdaftar!").val("").focus();
+                    $("input[type='submit']").attr("disabled", true);
+                    $("#dftrnama").attr("disabled", true);
+                    $("#dftremail").attr("disabled", true);
+                    $("#dftrthn").attr("disabled", true);
+                    $("#software").attr("disabled", true);
+                    $("#dftrhp").attr("disabled", true);
+                } else {
+                    $("input[type='submit']").removeAttr("disabled");
+                    $("#dftrnama").removeAttr("disabled").focus();
+                    $("#dftremail").removeAttr("disabled");
+                    $("#dftrthn").removeAttr("disabled");
+                    $("#software").removeAttr("disabled");
+                    $("#dftrhp").removeAttr("disabled");
+                }
             }
+        });
+    }
+} );
+
+$("#dftrnim").change(function(){
+    $.ajax({
+        url: "ajax/getlistmahasiswa",
+        data: { 'nim' : $(this).val() },
+        success: function(result){
+            $("#dftrnama").val( $namalengkap );
+            $("#namalengkap").val( $angkatan );
+            $("#dftrnama").change();
         }
     });
-} );
+});
+
 $("#dftrnama").change( function(){
     $.ajax({
         url: "ajax/ceknama",
@@ -94,6 +148,35 @@ $("#nimbtl").change( function(){
             }
         }
     });
+} );
+$("#mbnim").change( function(){
+    $.ajax({
+        url: "ajax/ceknim",
+        data: { "nim" : $(this).val() } ,
+        method: "POST",
+        success: function(result){
+            if( result == '1') {
+                $("#mbnim").attr("placeholder", "NIM Ini Sudah Ada!").val("").focus();
+                $("input[type='submit']").attr("disabled", true);
+                $("#mbnama").attr("disabled", true);
+                $("#mbangkatan").attr("disabled", true);
+            } else {
+                $("input[type='submit']").removeAttr("disabled");
+                $("#mbnama").removeAttr("disabled");
+                $("#mbangkatan").removeAttr("disabled");
+            }
+        }
+    });
+} );
+
+$("#dftrhp").change( function(){
+    var nohp=['081','082','085','089','087']
+
+    if (nohp.indexOf($(this).val().substr(0,3)) < 0){
+        $("#dftrhp").attr("placeholder", "Bukan Nomor HP").val("").focus();}
+    else{
+        //
+    }
 } );
 
 $("#likenews").click( function(){
