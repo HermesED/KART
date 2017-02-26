@@ -16,15 +16,13 @@
                             <input id="dftremail" type="email" name="email" class="form-control" required="required" placeholder="E-mail">
                         </div>
                         <div class="form-group">
-                            <div class="radio">
-                                <input type="radio" value="S1 - Sistem Informasi" name="studi" required="required">S1 - Sistem Informasi
-                            </div>
-                            <div class="radio">
-                                <input type="radio" value="S1 - Teknik Informatika" name="studi" required="required">S1 - Teknik Informatika
-                            </div>
-                            <div class="radio">
-                                <input type="radio" value="D3 - Sistem Informasi" name="studi" required="required">D3 - Sistem Informasi
-                            </div>
+                          <select id="dftrprodi" name="studi">
+                            <option select value="1">--Program Studi--</option>
+                            <option value="S1 - Sistem Informasi">S1 - Sistem Informasi</option>
+                            <option value="S1 - Teknik Informatika">S1 - Teknik Informatika</option>
+                            <option value="D3 - Sistem Informasi">D3 - Sistem Informasi</option>
+                            <option value="D3 - Teknik Informatika">D3 - Teknik Informatika</option>
+                          </select>
                         </div>
                     </div>
                 </div>
