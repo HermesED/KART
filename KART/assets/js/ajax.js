@@ -210,3 +210,18 @@ $("#mbnim").change( function(){
         }
     });
 } );
+$("#nimsignup").change( function(){
+    var noprodi=['510','520','310','320']
+    var d = new Date();
+    var tahun = d.getFullYear().toString();
+
+    if (noprodi.indexOf($(this).val().substr(0,3)) < 0 || parseInt($(this).val().substr(3,2))+2000>tahun){
+        $("#nimsignup").attr("placeholder", "NIM Ini Tidak Valid!").val("").focus();
+        $("#username").attr("disabled", true);
+        $("#password").attr("disabled", true);
+    }
+    else{
+        $("#username").removeAttr("disabled");
+        $("#password").removeAttr("disabled");
+    }
+} );
