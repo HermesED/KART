@@ -171,6 +171,72 @@ form.minimal label {
 		        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px rgb(248,66,66);
 		}
 
+	form.minimal input[type="text"]:valid,
+    form.minimal input[type="email"]:valid,
+    form.minimal input[type="number"]:valid,
+    form.minimal input[type="search"]:valid,
+    form.minimal input[type="password"]:valid,
+    form.minimal textarea:valid,
+    form.minimal select:valid { 
+      border-color: #0f9;
+    background-color: #0f9;
+    color: #000;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #0f9;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #0f9;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #0f9;
+    color: rgb(0,0,0);
+    }
+
+    form.minimal input[type="text"]:disabled,
+    form.minimal input[type="email"]:disabled,
+    form.minimal input[type="number"]:disabled,
+    form.minimal input[type="password"]:disabled,
+    form.minimal textarea:disabled,
+    form.minimal select:disabled { 
+    border-color: #333;
+    background-color: #222;
+    color: #fff;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #333;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #333;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #333;
+    }
+
+ form.minimal input::-webkit-input-placeholder,
+ form.minimal textarea::-webkit-input-placeholder{
+   color: #333;
+}
+
+form.minimal input:-moz-placeholder,
+form.minimal textarea:-moz-placeholder{ /* Firefox 18- */
+   color: #333;  
+}
+
+form.minimal input::-moz-placeholder,
+form.minimal textarea::-moz-placeholder {  /* Firefox 19+ */
+   color: #333;  
+}
+
+form.minimal input:-ms-input-placeholder
+form.minimal textarea:-ms-input-placeholder {  
+   color: #333;  
+}
+form.minimal input:disabled::-webkit-input-placeholder,
+form.minimal textarea:disabled::-webkit-input-placeholder { /* WebKit browsers */
+    color: #AAA;
+}
+form.minimal input:disabled:-moz-placeholder,
+form.minimal textarea:disabled:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #AAA;
+}
+form.minimal input:disabled::-moz-placeholder,
+form.minimal textarea:disabled::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #AAA;
+}
+form.minimal input:disabled:-ms-input-placeholder,
+form.minimal textarea:disabled:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #AAA;
+}
+
 @media screen and (max-width: 1920px) {
 	#loginBox #signup{
 		text-align: right;
