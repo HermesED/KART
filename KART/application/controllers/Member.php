@@ -28,6 +28,7 @@ class Member extends CI_Controller{
 		$data['quotes'] = "Add Data";
 		$this->load->view('templates/Header');
 		$this->load->view('templates/Nav', $data);
+		$this->daftar_model->proteksi();
 
 		$data['anggota'] 	= $this->project_model->tampil_dbmember(); 			//untuk tampil database anggota
 		$data['lol'] 		= $this->project_model->DBmember(); 				//ORDER BY NIM database anggota
@@ -46,6 +47,7 @@ class Member extends CI_Controller{
 		$this->load->view('templates/Nav', $data);
 		$data['users']		= $this->project_model->tampil_dbusers(); 			//untuk tampil database USER
 		$data['tuser'] 	 	= $this->project_model->total_user();				//untuk menghitung total jumlah user
+		$this->daftar_model->proteksi();
 		$this->load->view('pages/users1', $data);
 	}
 
@@ -65,17 +67,16 @@ class Member extends CI_Controller{
 		$this->load->view('Templates/Footer');
 	}
 
-	function tambah(){
-		$this->load->view('member_ukm');
-	}
-
 	public function input_anggota(){
+		$this->daftar_model->proteksi();
 		$this->daftar_model->entryanggota();
 		$this->session->set_flashdata('msg','INPUT DATA BERHASIL');
 		redirect( base_url('member_admin') );
 	}
 
 	function update(){
+		$this->daftar_model->proteksi();
+
 		$nim 					= $this->input->post('nim');
 		$namalengkap 			= $this->input->post('nama');
 		$programstudi 			= $this->input->post('studi');
@@ -98,6 +99,8 @@ class Member extends CI_Controller{
 		redirect('member_admin');
 	}
 	function upd_user(){
+		$this->daftar_model->proteksi();
+
 		$nim 					= $this->input->post('nim');
 		$username	 			= $this->input->post('username');
 		$admin 					= $this->input->post('admin');
@@ -119,6 +122,8 @@ class Member extends CI_Controller{
 
 	//Function hapus/delete di tabel anggota ukm, hapus anggota berdasarkan nim
 	function hapus_anggota($nim){
+		$this->daftar_model->proteksi();
+
 		$where = array('nim' => $nim);
 		$this->project_model->hapus_data($where,'anggota_ukm');
 	    $this->session->set_flashdata('msg','DATA ANGGOTA TELAH DI HAPUS');
@@ -126,6 +131,8 @@ class Member extends CI_Controller{
 	}
 	//Function hapus/delete list pembatalan
 	function hapusbtl($nim){
+		$this->daftar_model->proteksi();
+
 		$where = array('nim' => $nim);
 		$this->project_model->hapus_data($where,'pembatalan');
 		$this->session->set_flashdata('msg','DATA PEMBATALAN TELAH DI HAPUS');
@@ -133,12 +140,16 @@ class Member extends CI_Controller{
 	}
 	//Function hapus/delete list pendaftaran
 	function hapusdftr($nim){
+		$this->daftar_model->proteksi();
+
 		$where = array('nim' => $nim);
 		$this->project_model->hapus_data($where,'pendaftaran');
 		$this->session->set_flashdata('msg','DATA PENDAFTARAN TELAH DI HAPUS');
 		redirect('member_admin');
 	}
 	function deluser($nim){
+		$this->daftar_model->proteksi();
+
 		$where = array('nim' => $nim);
 		$this->project_model->hapus_data($where,'dblogin');
 		$this->session->set_flashdata('msg','DATA USER TELAH DI HAPUS');
@@ -147,6 +158,8 @@ class Member extends CI_Controller{
 
 	//This function will be called in view as form action
 	function submit(){
+		$this->daftar_model->proteksi();
+		
 		if($this->input->post('sbm') == "input") { 
 		    $this->tambah_aksi();} 									//Execute Input Button
 		else if ($this->input->post('sbm') == "update") {

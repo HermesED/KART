@@ -7,29 +7,28 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="common-form bottom">
                         <div class="form-group">
-                            <input id="nimdftr" type="text" name="nim" class="form-control" placeholder="NIM (8 angka)" maxlength="8" pattern="\d{8}" required="required" title="8 Digit Angka NIM, NUMBERS and CHARACTERS not allowed" />
+                            <input id="mbnim" type="text" name="nim" class="form-control" placeholder="NIM (8 angka)" maxlength="8" pattern="\d{8}" required="required" title="8 Digit Angka NIM, NUMBERS and CHARACTERS not allowed" />
                             <p id="warning_nim"></p>
                         </div>
                         <div class="form-group">
-                            <input id="nama" type="text" name="nama" class="form-control" maxlength="50" placeholder="Nama Lengkap (5 - 40 karakter)" pattern="^[a-zA-Z\s]{5,40}$" required="required" title="Info: MIN 5, MAX 40 Characters, NUMBERS and OPERATORS not allowed" />
+                            <input id="mbnama" type="text" name="nama" class="form-control" maxlength="50" placeholder="Nama Lengkap (5 - 40 karakter)" pattern="^[a-zA-Z\s]{5,40}$" required="required" title="Info: MIN 5, MAX 40 Characters, NUMBERS and OPERATORS not allowed" />
                         </div>
                         <div class="form-group">
-                            <div class="radio">
-                                <input type="radio" value="S1 - Sistem Informasi" name="studi" required="required">S1 - Sistem Informasi
-                            </div>
-                            <div class="radio">
-                                <input type="radio" value="S1 - Teknik Informatika" name="studi" required="required">S1 - Teknik Informatika
-                            </div>
-                            <div class="radio">
-                                <input type="radio" value="D3 - Sistem Informasi" name="studi" required="required">D3 - Sistem Informasi
-                            </div>
+                          <select id="mbjurusan" name="studi">
+                            <option select value="1">--Program Studi--</option>
+                            <option value="S1 - Sistem Informasi">S1 - Sistem Informasi</option>
+                            <option value="S1 - Teknik Informatika">S1 - Teknik Informatika</option>
+                            <option value="D3 - Sistem Informasi">D3 - Sistem Informasi</option>
+                            <option value="D3 - Teknik Informatika">D3 - Teknik Informatika</option>
+                          </select>
                         </div>
+                        
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="common-form bottom">
                         <div class="form-group">
-                            <input type="text" name="angkatan" class="form-control" required="required" placeholder="Tahun Angkatan" maxlength="4" pattern="\d{4}">
+                            <input id="mbangkatan" type="text" name="angkatan" class="form-control" required="required" placeholder="Tahun Angkatan" maxlength="4" pattern="\d{4}">
                         </div>
                         <div class="form-group">
                             <div class="radio">
@@ -112,6 +111,7 @@
 
               <tbody>
                 <tr>
+                  <th><b>No Urut</b></th>
                   <th><b>NIM</b></th>
                   <th><b>Nama Lengkap</b></th>
                   <th><b>Program Studi</b></th>
@@ -120,10 +120,13 @@
                   <th><b>Delete</b></th>
                 </tr>
                 <tr>
-                <?php foreach($anggota as $pengurus){
+                <?php 
+                $u=1;
+                foreach($anggota as $pengurus){
                 ?>
                 </tr>
                 <tr>
+                  <td><?= $u;?></td>
                   <td><?= $pengurus->nim;?></td>
                   <td><?= $pengurus->namalengkap;?></td>
                   <td><?= $pengurus->programstudi;?></td>
@@ -137,7 +140,8 @@
                 </tr>
                 
               </tbody>
-              <?php }?>
+              <?php 
+              $u++;}?>
             </table>
             <hr>
           </div> <!--END DIV TABLE RESPONSIVE-->
@@ -302,3 +306,5 @@
 
   </section> <!-- END SECTION PENGURUS -->
 </div>       <!-- END DIV -->
+
+<script src="<?= base_url()?>assets/js/ajax.js"></script>
